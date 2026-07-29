@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { to: '/leistungen', label: 'Leistungen' },
   { to: '/ueber-mich', label: 'Über mich' },
   { href: GOOGLE_REVIEWS_URL, label: 'Referenzen', external: true },
+  { to: '/faq', label: 'FAQs' },
   { to: '/kontakt', label: 'Kontakt' },
 ]
 
@@ -52,7 +53,7 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="border-b border-brand-100 sticky top-0 bg-white/90 backdrop-blur z-20">
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <Link to="/" className="flex items-center">
             <img src="logo.png" alt="LF Smart Energy – Luca Ferrandina" className="h-9 w-auto" />
           </Link>
@@ -64,12 +65,12 @@ export default function Layout() {
           />
 
           <div className="flex items-center gap-4">
-            <nav className="hidden sm:flex items-center gap-6 text-sm">
+            <nav className="hidden xl:flex items-center gap-6 text-sm">
               <NavLinks className="transition-colors" />
             </nav>
 
             <button
-              className="sm:hidden p-2 text-ink-700"
+              className="xl:hidden p-2 text-ink-700"
               aria-label="Menü öffnen"
               onClick={() => setMenuOpen((v) => !v)}
             >
@@ -79,7 +80,7 @@ export default function Layout() {
         </div>
 
         {menuOpen && (
-          <nav className="sm:hidden flex flex-col gap-1 px-4 pb-4 text-sm">
+          <nav className="xl:hidden flex flex-col gap-1 px-4 pb-4 text-sm">
             <NavLinks className="py-2" onNavigate={() => setMenuOpen(false)} />
           </nav>
         )}

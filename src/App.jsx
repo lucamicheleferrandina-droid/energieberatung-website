@@ -6,6 +6,7 @@ import UeberMich from './pages/UeberMich.jsx'
 import Kontakt from './pages/Kontakt.jsx'
 import Impressum from './pages/Impressum.jsx'
 import Datenschutz from './pages/Datenschutz.jsx'
+import FAQ from './pages/FAQ.jsx'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="leistungen" element={<Leistungen />} />
         <Route path="ueber-mich" element={<UeberMich />} />
+        <Route path="faq" element={<FAQ />} />
         <Route path="kontakt" element={<Kontakt />} />
         <Route path="impressum" element={<Impressum />} />
         <Route path="datenschutz" element={<Datenschutz />} />
