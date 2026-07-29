@@ -2,29 +2,46 @@ import { useState } from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 
+const GOOGLE_REVIEWS_URL =
+  'https://www.google.com/search?q=Luca+Ferrandina+Energieberatung&kgmid=/g/11nb4l8d0v'
+
 const NAV_ITEMS = [
   { to: '/', label: 'Start', end: true },
   { to: '/leistungen', label: 'Leistungen' },
   { to: '/ueber-mich', label: 'Über mich' },
+  { href: GOOGLE_REVIEWS_URL, label: 'Referenzen', external: true },
   { to: '/kontakt', label: 'Kontakt' },
 ]
 
 function NavLinks({ onNavigate, className }) {
   return (
     <>
-      {NAV_ITEMS.map((item) => (
-        <NavLink
-          key={item.to}
-          to={item.to}
-          end={item.end}
-          onClick={onNavigate}
-          className={({ isActive }) =>
-            `${className} ${isActive ? 'text-brand-700 font-semibold' : 'text-ink-700 hover:text-brand-700'}`
-          }
-        >
-          {item.label}
-        </NavLink>
-      ))}
+      {NAV_ITEMS.map((item) =>
+        item.external ? (
+          <a
+            key={item.label}
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onNavigate}
+            className={`${className} text-ink-700 hover:text-brand-700`}
+          >
+            {item.label}
+          </a>
+        ) : (
+          <NavLink
+            key={item.to}
+            to={item.to}
+            end={item.end}
+            onClick={onNavigate}
+            className={({ isActive }) =>
+              `${className} ${isActive ? 'text-brand-700 font-semibold' : 'text-ink-700 hover:text-brand-700'}`
+            }
+          >
+            {item.label}
+          </NavLink>
+        )
+      )}
     </>
   )
 }
