@@ -35,18 +35,18 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="border-b border-brand-100 sticky top-0 bg-white/90 backdrop-blur z-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 grid grid-cols-3 items-center h-16">
-          <Link to="/" className="flex items-center justify-self-start">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+          <Link to="/" className="flex items-center">
             <img src="logo.png" alt="LF Smart Energy – Luca Ferrandina" className="h-9 w-auto" />
           </Link>
 
           <img
             src="badge.png"
             alt="Energieeffizienz-Experten für Förderprogramme des Bundes"
-            className="hidden sm:block h-8 w-auto justify-self-center"
+            className="absolute left-1/2 -translate-x-1/2 h-6 sm:h-8 w-auto"
           />
 
-          <div className="flex items-center justify-self-end gap-4">
+          <div className="flex items-center gap-4">
             <nav className="hidden sm:flex items-center gap-6 text-sm">
               <NavLinks className="transition-colors" />
             </nav>
