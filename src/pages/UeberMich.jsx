@@ -11,9 +11,11 @@ export default function UeberMich() {
     <section className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
       <h1 className="text-3xl font-bold text-ink-900 mb-8 text-center">Über mich</h1>
 
-      <div className="w-40 h-40 sm:w-48 sm:h-48 mx-auto rounded-full bg-brand-50 border border-brand-100 flex items-center justify-center text-ink-500 text-xs text-center p-4 mb-8">
-        [Platzhalter: Porträtfoto]
-      </div>
+      <img
+        src="portrait.jpg"
+        alt="Luca Ferrandina"
+        className="w-40 h-40 sm:w-48 sm:h-48 mx-auto rounded-full object-cover border border-brand-100 mb-8"
+      />
 
       <p className="text-ink-700 text-center max-w-xl mx-auto mb-14">
         Mein Name ist Luca Ferrandina, seit 2025 zertifizierter
