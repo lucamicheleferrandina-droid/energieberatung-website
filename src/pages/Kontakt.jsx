@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Mail, Phone } from 'lucide-react'
 
-// TODO: Formspree-Endpoint eintragen, siehe README.md ("Kontaktformular einrichten")
-const FORM_ENDPOINT = 'https://formspree.io/f/DEIN_FORMULAR_CODE'
+const FORM_ENDPOINT = 'https://formspree.io/f/mkodewqj'
 
 function Field({ id, label, type = 'text', required = false }) {
   return (
