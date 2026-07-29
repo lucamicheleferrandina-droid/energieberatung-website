@@ -1,0 +1,24 @@
+export default function Impressum() {
+  return (
+    <section className="max-w-3xl mx-auto px-4 sm:px-6 py-16 prose prose-ink">
+      <h1 className="text-3xl font-bold text-ink-900 mb-6">Impressum</h1>
+      <p className="text-ink-700">
+        [Platzhalter – noch nicht rechtsgültig, bitte vor Veröffentlichung
+        vervollständigen und rechtlich prüfen lassen]
+      </p>
+      <h2 className="font-semibold text-ink-900 mt-6">Angaben gemäß § 5 TMG</h2>
+      <p className="text-ink-700">
+        [Name]<br />
+        [Straße, Hausnummer]<br />
+        [PLZ, Ort]
+      </p>
+      <h2 className="font-semibold text-ink-900 mt-6">Kontakt</h2>
+      <p className="text-ink-700">
+        Telefon: [Platzhalter]<br />
+        E-Mail: info@meine-energieberatung.com
+      </p>
+      <h2 className="font-semibold text-ink-900 mt-6">Umsatzsteuer-ID</h2>
+      <p className="text-ink-700">[Platzhalter, falls vorhanden]</p>
+    </section>
+  )
+}
