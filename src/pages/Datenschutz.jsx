@@ -73,12 +73,24 @@ export default function Datenschutz() {
       <h2 className="font-semibold text-ink-900 mt-8">4. Kontaktformular</h2>
       <p className="text-ink-700">
         Wenn Sie uns über das Kontaktformular eine Anfrage senden, werden die
-        von Ihnen im Formular angegebenen Daten (Name, E-Mail-Adresse,
-        Nachricht) zum Zwecke der Bearbeitung Ihrer Anfrage und für
-        eventuelle Anschlussfragen bei uns gespeichert. Die Verarbeitung
-        erfolgt auf Grundlage Ihres Interesses an unserer Kontaktaufnahme
-        (Art. 6 Abs. 1 lit. b DSGVO) bzw. unseres berechtigten Interesses an
-        der Beantwortung von Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
+        von Ihnen angegebenen Daten zum Zwecke der Bearbeitung Ihrer Anfrage
+        und für eventuelle Anschlussfragen bei uns gespeichert. Dabei werden
+        folgende Daten erhoben:
+      </p>
+      <ul className="text-ink-700 list-disc pl-6">
+        <li>Persönliche Daten: Name, Ihre Adresse, E-Mail-Adresse</li>
+        <li>
+          Objektbezogene Daten (freiwillig, soweit für die Anfrage relevant):
+          Adresse des Objekts, Baujahr, Grundfläche/Wohnfläche
+        </li>
+        <li>Ihre Anfrage im Freitextfeld</li>
+      </ul>
+      <p className="text-ink-700">
+        Die Verarbeitung erfolgt auf Grundlage Ihres Interesses an unserer
+        Kontaktaufnahme (Art. 6 Abs. 1 lit. b DSGVO) bzw. unseres berechtigten
+        Interesses an der Beantwortung von Anfragen (Art. 6 Abs. 1 lit. f
+        DSGVO) sowie Ihrer Einwilligung durch Bestätigung der entsprechenden
+        Checkbox im Formular (Art. 6 Abs. 1 lit. a DSGVO).
       </p>
       <p className="text-ink-700">
         Die technische Übermittlung des Formulars erfolgt über den Dienst
