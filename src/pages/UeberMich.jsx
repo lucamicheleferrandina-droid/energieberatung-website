@@ -25,8 +25,9 @@ export default function UeberMich() {
         technisches Wissen in jede Beratung ein. Dabei ist mir vor allem
         eines wichtig: ehrliche, praxisnahe Empfehlungen, die sich für Sie
         wirtschaftlich lohnen – inklusive der bestmöglichen Ausschöpfung
-        staatlicher Förderprogramme. Als technikbegeisterter Verfechter
-        nachhaltiger Lösungen begleite ich Sie kompetent auf dem Weg zu
+        staatlicher Förderprogramme. Mit großem Interesse an nachhaltigen
+        Lösungen und ausgeprägter Technikbegeisterung begleite ich Sie
+        kompetent auf dem Weg zu
         einem energieeffizienten Zuhause.
       </p>
 
