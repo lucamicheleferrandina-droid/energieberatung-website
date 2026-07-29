@@ -19,7 +19,15 @@ export default function UeberMich() {
 
       <p className="text-ink-700 text-center max-w-xl mx-auto mb-14">
         Mein Name ist Luca Ferrandina, seit 2025 zertifizierter
-        Energieeffizienz-Experte. {/* TODO: ausführlicherer Text folgt noch von Luca */}
+        Energieeffizienz-Experte. Mit meinem Hintergrund als
+        Maschinenbau-Verfahrenstechniker und meiner Erfahrung als
+        TGA-Ingenieur in der chemischen Industrie bringe ich fundiertes
+        technisches Wissen in jede Beratung ein. Dabei ist mir vor allem
+        eines wichtig: ehrliche, praxisnahe Empfehlungen, die sich für Sie
+        wirtschaftlich lohnen – inklusive der bestmöglichen Ausschöpfung
+        staatlicher Förderprogramme. Als technikbegeisterter Verfechter
+        nachhaltiger Lösungen begleite ich Sie kompetent auf dem Weg zu
+        einem energieeffizienten Zuhause.
       </p>
 
       <h2 className="text-xl font-semibold text-ink-900 mb-6">Werdegang</h2>
