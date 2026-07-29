@@ -1,7 +1,9 @@
 const WERDEGANG = [
-  { jahr: '[Jahr]', text: '[Platzhalter] Station im Werdegang, z.B. Ausbildung/Studium.' },
-  { jahr: '[Jahr]', text: '[Platzhalter] Station im Werdegang, z.B. Zertifizierung zum Energieeffizienz-Experten.' },
-  { jahr: '[Jahr]', text: '[Platzhalter] Station im Werdegang, z.B. Gründung der eigenen Beratung.' },
+  { jahr: '2021–2025', text: 'Hochschulstudium Maschinenbau-Verfahrenstechnik' },
+  { jahr: '2021–2026', text: 'TGA-Ingenieur in der chemischen Industrie' },
+  { jahr: 'seit 2025', text: 'Zertifizierter Energieberater' },
+  { jahr: '2025', text: 'Zertifikat Trinkwasserhygiene VDI 6023 Kat. A' },
+  { jahr: '2026', text: 'Zertifikat Lüftungshygiene VDI 6022 Kat. A' },
 ]
 
 export default function UeberMich() {
@@ -14,8 +16,8 @@ export default function UeberMich() {
       </div>
 
       <p className="text-ink-700 text-center max-w-xl mx-auto mb-14">
-        [Platzhalter] 2–3 Sätze über Luca: wer er ist, was ihn als
-        Energieeffizienz-Experten ausmacht und wem er hilft.
+        Mein Name ist Luca Ferrandina, seit 2025 zertifizierter
+        Energieeffizienz-Experte. {/* TODO: ausführlicherer Text folgt noch von Luca */}
       </p>
 
       <h2 className="text-xl font-semibold text-ink-900 mb-6">Werdegang</h2>
