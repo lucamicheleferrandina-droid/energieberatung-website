@@ -14,11 +14,15 @@ export default function Impressum() {
       </p>
       <h2 className="font-semibold text-ink-900 mt-6">Kontakt</h2>
       <p className="text-ink-700">
-        Telefon: [Platzhalter]<br />
+        Telefon: 0176 68270350<br />
         E-Mail: info@meine-energieberatung.com
       </p>
+      <h2 className="font-semibold text-ink-900 mt-6">Rechtsform</h2>
+      <p className="text-ink-700">Einzelunternehmer, nebenberuflich selbstständig</p>
+      <h2 className="font-semibold text-ink-900 mt-6">Energieberater-Registrierungsnummer</h2>
+      <p className="text-ink-700">EB673442</p>
       <h2 className="font-semibold text-ink-900 mt-6">Umsatzsteuer-ID</h2>
-      <p className="text-ink-700">[Platzhalter, falls vorhanden]</p>
+      <p className="text-ink-700">[wird nachgereicht]</p>
     </section>
   )
 }
