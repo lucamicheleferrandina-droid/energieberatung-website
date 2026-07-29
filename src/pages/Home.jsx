@@ -16,12 +16,11 @@ export default function Home() {
           Energieberatung
         </p>
         <h1 className="text-3xl sm:text-5xl font-bold text-ink-900 mb-6">
-          [Platzhalter] Kurzer, einprägsamer Titelsatz –
-          <br className="hidden sm:block" /> z.B. „Ihr Weg zum energieeffizienten Zuhause“
+          Ihr Weg zum energieeffizienten Zuhause
         </h1>
         <p className="text-ink-500 max-w-2xl mx-auto mb-8">
-          [Platzhalter] Ein bis zwei Sätze, die kurz erklären, wem Luca hilft und wie
-          (z.B. Eigenheimbesitzern bei Sanierung, Förderanträgen und Energiesparen).
+          Energieberatung, individuelle Sanierungsfahrpläne, Energieausweise und
+          Heiz-/Kühllastberechnungen aus einer Hand – persönlich und kompetent.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
