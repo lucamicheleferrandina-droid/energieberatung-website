@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
-import { Menu, X, Leaf } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const NAV_ITEMS = [
   { to: '/', label: 'Start', end: true },
@@ -36,9 +36,8 @@ export default function Layout() {
     <div className="min-h-screen flex flex-col">
       <header className="border-b border-brand-100 sticky top-0 bg-white/90 backdrop-blur z-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2 font-semibold text-ink-900">
-            <Leaf className="text-brand-600" size={22} />
-            <span>Luca Ferrandina</span>
+          <Link to="/" className="flex items-center">
+            <img src="logo.png" alt="LF Smart Energy – Luca Ferrandina" className="h-9 w-auto" />
           </Link>
 
           <nav className="hidden sm:flex items-center gap-6 text-sm">
