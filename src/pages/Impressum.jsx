@@ -8,9 +8,9 @@ export default function Impressum() {
       </p>
       <h2 className="font-semibold text-ink-900 mt-6">Angaben gemäß § 5 TMG</h2>
       <p className="text-ink-700">
-        [Name]<br />
-        [Straße, Hausnummer]<br />
-        [PLZ, Ort]
+        Luca Ferrandina<br />
+        Nelkenstraße 114<br />
+        67691 Hochspeyer
       </p>
       <h2 className="font-semibold text-ink-900 mt-6">Kontakt</h2>
       <p className="text-ink-700">
