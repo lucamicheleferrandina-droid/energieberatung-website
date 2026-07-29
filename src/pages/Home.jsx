@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom'
 import { CheckCircle2 } from 'lucide-react'
 
 const HIGHLIGHTS = [
-  '[Platzhalter] Zertifizierter Energieeffizienz-Experte (dena-Expertenliste)',
-  '[Platzhalter] Individuelle Sanierungsfahrpläne (iSFP)',
-  '[Platzhalter] Beratung zu Förderprogrammen (BEG, KfW)',
+  'Energieberatung',
+  'Individuelle Sanierungsfahrpläne (iSFP)',
+  'Energieausweise',
+  'Heiz- und Kühllastberechnungen',
 ]
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
       </section>
 
       <section className="bg-brand-50/60 py-14">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 grid sm:grid-cols-3 gap-6">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {HIGHLIGHTS.map((text) => (
             <div key={text} className="flex items-start gap-3 bg-white rounded-xl p-5 shadow-sm">
               <CheckCircle2 className="text-brand-600 shrink-0 mt-0.5" size={20} />

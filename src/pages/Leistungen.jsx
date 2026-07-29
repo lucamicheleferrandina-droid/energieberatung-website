@@ -1,19 +1,19 @@
 const LEISTUNGEN = [
   {
-    titel: '[Platzhalter] Energieberatung vor Ort',
-    text: '[Platzhalter] Kurze Beschreibung dieser Leistung, z.B. Ablauf und Nutzen für den Kunden.',
+    titel: 'Energieberatung',
+    text: 'Persönliche Beratung zu energetischen Schwachstellen und sinnvollen Maßnahmen an Ihrer Immobilie.',
   },
   {
-    titel: '[Platzhalter] Individueller Sanierungsfahrplan (iSFP)',
-    text: '[Platzhalter] Kurze Beschreibung.',
+    titel: 'Individuelle Sanierungsfahrpläne (iSFP)',
+    text: 'Schrittweiser Fahrplan für die energetische Sanierung Ihres Gebäudes, abgestimmt auf Ihr Budget und Ihre Ziele.',
   },
   {
-    titel: '[Platzhalter] Förderanträge (BEG / KfW)',
-    text: '[Platzhalter] Kurze Beschreibung.',
+    titel: 'Energieausweise',
+    text: 'Erstellung von Energieausweisen für Wohn- und Nichtwohngebäude, z.B. für Verkauf oder Vermietung.',
   },
   {
-    titel: '[Platzhalter] Baubegleitung',
-    text: '[Platzhalter] Kurze Beschreibung.',
+    titel: 'Heiz- und Kühllastberechnungen',
+    text: 'Berechnung der Heiz- und Kühllast Ihres Gebäudes als Grundlage für eine korrekt dimensionierte Anlagentechnik.',
   },
 ]
 
@@ -22,7 +22,8 @@ export default function Leistungen() {
     <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
       <h1 className="text-3xl font-bold text-ink-900 mb-3">Leistungen</h1>
       <p className="text-ink-500 mb-10 max-w-2xl">
-        [Platzhalter] Einleitender Text zu den angebotenen Leistungen.
+        Als zertifizierter Energieeffizienz-Experte biete ich Ihnen folgende
+        Leistungen rund um energieeffizientes Bauen und Sanieren an.
       </p>
 
       <div className="grid sm:grid-cols-2 gap-6">
