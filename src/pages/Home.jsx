@@ -11,6 +11,7 @@ import {
   Leaf,
   CheckCircle2,
 } from 'lucide-react'
+import useSeo from '../hooks/useSeo.js'
 
 const VERTRAUEN = [
   { icon: UserCheck, titel: 'Persönlich & unabhängig' },
@@ -49,13 +50,18 @@ const HIGHLIGHTS = [
 ]
 
 export default function Home() {
+  useSeo(
+    'Energieberatung Kaiserslautern | Luca Ferrandina – Energieeffizienz-Experte',
+    'Zertifizierte Energieberatung in Kaiserslautern und Umgebung: individueller Sanierungsfahrplan (iSFP), Energieausweise, Förderanträge (BEG/KfW) und persönliche Beratung von Luca Ferrandina.'
+  )
+
   return (
     <div>
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="uppercase tracking-wide text-brand-600 text-sm font-semibold mb-3">
-              Energieberatung
+              Energieberatung Kaiserslautern
             </p>
             <h1 className="text-3xl sm:text-5xl font-bold text-ink-900 mb-6">
               Ihr Weg zum energieeffizienten Zuhause
@@ -63,9 +69,10 @@ export default function Home() {
             <p className="text-ink-500 max-w-lg mb-8">
               Ein energieeffizientes Zuhause spart nicht nur Heizkosten, sondern
               steigert auch Ihren Wohnkomfort und schont langfristig die Umwelt.
-              Als zertifizierter Energieeffizienz-Experte begleite ich Sie
-              persönlich von der ersten Beratung bis zur Umsetzung – ehrlich,
-              praxisnah und mit Blick auf die bestmögliche Förderung.
+              Als zertifizierter Energieeffizienz-Experte begleite ich Sie in
+              Kaiserslautern und Umgebung persönlich von der ersten Beratung
+              bis zur Umsetzung – ehrlich, praxisnah und mit Blick auf die
+              bestmögliche Förderung.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

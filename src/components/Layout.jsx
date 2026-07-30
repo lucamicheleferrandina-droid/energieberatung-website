@@ -105,7 +105,9 @@ export default function Layout() {
 
       <footer className="border-t border-brand-100 mt-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink-500">
-          <span>© {new Date().getFullYear()} Luca Ferrandina – Energieberatung</span>
+          <span>
+            © {new Date().getFullYear()} Luca Ferrandina – Energieberatung Kaiserslautern und Umgebung
+          </span>
           <div className="flex gap-4">
             <Link to="/impressum" className="hover:text-brand-700">Impressum</Link>
             <Link to="/datenschutz" className="hover:text-brand-700">Datenschutz</Link>

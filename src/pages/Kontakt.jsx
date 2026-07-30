@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Mail, Phone } from 'lucide-react'
+import useSeo from '../hooks/useSeo.js'
 
 const FORM_ENDPOINT = 'https://formspree.io/f/mkodewqj'
 
@@ -22,6 +23,11 @@ function Field({ id, label, type = 'text', required = false }) {
 }
 
 export default function Kontakt() {
+  useSeo(
+    'Kontakt | Energieberatung Kaiserslautern – Luca Ferrandina',
+    'Kontaktieren Sie Luca Ferrandina für eine Energieberatung in Kaiserslautern und Umgebung – per Formular, Telefon oder E-Mail.'
+  )
+
   return (
     <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
       <h1 className="text-3xl font-bold text-ink-900 mb-3">Kontakt</h1>

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
+import useSeo from '../hooks/useSeo.js'
 
 const FAQS = [
   {
@@ -78,6 +79,11 @@ function FaqItem({ frage, antwort }) {
 }
 
 export default function FAQ() {
+  useSeo(
+    'Häufige Fragen zu Energieberatung & Förderung | Kaiserslautern',
+    'Antworten auf häufige Fragen zu Energieberatung, iSFP, Förderungen und Antragstellung – von Luca Ferrandina, Energieeffizienz-Experte in Kaiserslautern.'
+  )
+
   return (
     <section className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
       <h1 className="text-3xl font-bold text-ink-900 mb-3">Häufige Fragen</h1>

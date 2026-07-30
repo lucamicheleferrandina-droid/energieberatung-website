@@ -1,4 +1,5 @@
 import { Home as HomeIcon, ClipboardList, Award, Thermometer } from 'lucide-react'
+import useSeo from '../hooks/useSeo.js'
 
 const LEISTUNGEN = [
   {
@@ -32,6 +33,11 @@ const LEISTUNGEN = [
 ]
 
 export default function Leistungen() {
+  useSeo(
+    'Leistungen: iSFP, Energieausweis & Heizlastberechnung | Energieberatung Kaiserslautern',
+    'Energieberatung, individuelle Sanierungsfahrpläne (iSFP), Energieausweise für Wohngebäude und Heiz-/Kühllastberechnungen – Leistungen von Luca Ferrandina in Kaiserslautern und Umgebung.'
+  )
+
   return (
     <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
       <h1 className="text-3xl font-bold text-ink-900 mb-3">Leistungen</h1>

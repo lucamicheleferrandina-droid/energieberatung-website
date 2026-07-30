@@ -1,3 +1,5 @@
+import useSeo from '../hooks/useSeo.js'
+
 const WERDEGANG = [
   { jahr: '2021–2025', text: 'Hochschulstudium Maschinenbau-Verfahrenstechnik' },
   { jahr: '2021–2026', text: 'TGA-Ingenieur in der chemischen Industrie' },
@@ -7,6 +9,11 @@ const WERDEGANG = [
 ]
 
 export default function UeberMich() {
+  useSeo(
+    'Über mich | Luca Ferrandina – Energieberater in Kaiserslautern',
+    'Luca Ferrandina: zertifizierter Energieeffizienz-Experte in Kaiserslautern und Umgebung. Hintergrund als Maschinenbau-Verfahrenstechniker und TGA-Ingenieur, Werdegang und Zertifikate im Überblick.'
+  )
+
   return (
     <section className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
       <h1 className="text-3xl font-bold text-ink-900 mb-8 text-center">Über mich</h1>

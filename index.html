@@ -1,6 +1,22 @@
 <!doctype html>
 <html lang="de">
   <head>
+    <script>
+      // GitHub Pages SPA-Trick: stellt den ursprünglichen Pfad wieder her,
+      // nachdem 404.html ihn als Query-String hierher umgeleitet hat.
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&')
+            })
+            .join('?')
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash)
+        }
+      })(window.location)
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,11 +26,34 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <title>Luca Ferrandina – Energieberatung &amp; Energieeffizienz-Experte</title>
+    <title>Energieberatung Kaiserslautern | Luca Ferrandina – Energieeffizienz-Experte</title>
     <meta
       name="description"
-      content="Zertifizierte Energieberatung von Luca Ferrandina: individueller Sanierungsfahrplan (iSFP), Förderanträge (BEG/KfW) und persönliche Beratung rund ums energieeffiziente Bauen und Sanieren."
+      content="Zertifizierte Energieberatung in Kaiserslautern und Umgebung: individueller Sanierungsfahrplan (iSFP), Energieausweise, Förderanträge (BEG/KfW) und persönliche Beratung von Luca Ferrandina."
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Luca Ferrandina – Energieberatung",
+        "image": "https://energieberatung-ferrandina.com/logo.png",
+        "url": "https://energieberatung-ferrandina.com/",
+        "telephone": "+49 176 68270350",
+        "email": "info@meine-energieberatung.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Nelkenstraße 114",
+          "postalCode": "67691",
+          "addressLocality": "Hochspeyer",
+          "addressCountry": "DE"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Kaiserslautern und Umgebung"
+        },
+        "sameAs": ["https://www.google.com/search?q=Luca+Ferrandina+Energieberatung&kgmid=/g/11nb4l8d0v"]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
