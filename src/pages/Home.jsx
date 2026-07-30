@@ -61,8 +61,11 @@ export default function Home() {
               Ihr Weg zum energieeffizienten Zuhause
             </h1>
             <p className="text-ink-500 max-w-lg mb-8">
-              Energieberatung, individuelle Sanierungsfahrpläne, Energieausweise und
-              Heiz-/Kühllastberechnungen aus einer Hand – persönlich und kompetent.
+              Ein energieeffizientes Zuhause spart nicht nur Heizkosten, sondern
+              steigert auch Ihren Wohnkomfort und schont langfristig die Umwelt.
+              Als zertifizierter Energieeffizienz-Experte begleite ich Sie
+              persönlich von der ersten Beratung bis zur Umsetzung – ehrlich,
+              praxisnah und mit Blick auf die bestmögliche Förderung.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
