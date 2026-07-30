@@ -17,6 +17,19 @@
         }
       })(window.location)
     </script>
+    <script>
+      // Normalisiert einen abschließenden Schrägstrich weg (z.B. von
+      // /leistungen/ zu /leistungen), damit react-router die Route
+      // zuverlässig matcht – Server können beim Aufruf von Verzeichnissen
+      // automatisch einen Schrägstrich anhängen.
+      if (location.pathname.length > 1 && location.pathname.endsWith('/')) {
+        window.history.replaceState(
+          null,
+          null,
+          location.pathname.slice(0, -1) + location.search + location.hash
+        )
+      }
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
