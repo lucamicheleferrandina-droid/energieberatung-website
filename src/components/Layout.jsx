@@ -11,7 +11,6 @@ const NAV_ITEMS = [
   { to: '/ueber-mich', label: 'Über mich' },
   { href: GOOGLE_REVIEWS_URL, label: 'Referenzen', external: true },
   { to: '/faq', label: 'FAQs' },
-  { to: '/kontakt', label: 'Kontakt' },
 ]
 
 function NavLinks({ onNavigate, className }) {
@@ -69,6 +68,13 @@ export default function Layout() {
               <NavLinks className="transition-colors" />
             </nav>
 
+            <Link
+              to="/kontakt"
+              className="hidden xl:inline-flex items-center px-5 py-2 rounded-full bg-brand-600 text-white text-sm font-medium shadow-sm hover:bg-brand-700 hover:shadow-md transition-all"
+            >
+              Kontakt aufnehmen
+            </Link>
+
             <button
               className="xl:hidden p-2 text-ink-700"
               aria-label="Menü öffnen"
@@ -82,6 +88,13 @@ export default function Layout() {
         {menuOpen && (
           <nav className="xl:hidden flex flex-col gap-1 px-4 pb-4 text-sm">
             <NavLinks className="py-2" onNavigate={() => setMenuOpen(false)} />
+            <Link
+              to="/kontakt"
+              onClick={() => setMenuOpen(false)}
+              className="mt-2 inline-flex justify-center px-5 py-2.5 rounded-full bg-brand-600 text-white font-medium shadow-sm hover:bg-brand-700 transition-colors"
+            >
+              Kontakt aufnehmen
+            </Link>
           </nav>
         )}
       </header>

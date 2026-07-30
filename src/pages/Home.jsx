@@ -1,63 +1,128 @@
 import { Link } from 'react-router-dom'
-import { CheckCircle2 } from 'lucide-react'
+import {
+  Home as HomeIcon,
+  ClipboardList,
+  Award,
+  Thermometer,
+  UserCheck,
+  ShieldCheck,
+  Target,
+  Heart,
+  Leaf,
+} from 'lucide-react'
+
+const VERTRAUEN = [
+  { icon: UserCheck, titel: 'Persönlich & unabhängig' },
+  { icon: ShieldCheck, titel: 'Fördermittel-Experte' },
+  { icon: Target, titel: 'Maßgeschneiderte Lösungen' },
+  { icon: Heart, titel: 'Nachhaltig für die Zukunft' },
+]
 
 const HIGHLIGHTS = [
-  'Energieberatung',
-  'Individuelle Sanierungsfahrpläne (iSFP)',
-  'Energieausweise',
-  'Heiz- und Kühllastberechnungen',
+  {
+    icon: HomeIcon,
+    titel: 'Energieberatung',
+    text: 'Persönliche Vor-Ort-Beratung zu energetischen Schwachstellen und sinnvollen Maßnahmen.',
+  },
+  {
+    icon: ClipboardList,
+    titel: 'Sanierungsfahrpläne',
+    text: 'Schrittweiser Sanierungsfahrplan (iSFP) mit bis zu 20 % höherem Fördersatz.',
+  },
+  {
+    icon: Award,
+    titel: 'Energieausweise',
+    text: 'Energieausweise für Wohngebäude, z. B. für Verkauf oder Vermietung.',
+  },
+  {
+    icon: Thermometer,
+    titel: 'Heiz- & Kühllast',
+    text: 'Fachgerechte Berechnung für eine korrekt dimensionierte Anlagentechnik.',
+  },
 ]
 
 export default function Home() {
   return (
     <div>
-      <section className="relative overflow-hidden">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 -top-32 -z-10 flex justify-center"
-        >
-          <div className="h-96 w-[36rem] rounded-full bg-brand-200/50 blur-3xl" />
-        </div>
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="uppercase tracking-wide text-brand-600 text-sm font-semibold mb-3">
+              Energieberatung
+            </p>
+            <h1 className="text-3xl sm:text-5xl font-bold text-ink-900 mb-6">
+              Ihr Weg zum energieeffizienten Zuhause
+            </h1>
+            <p className="text-ink-500 max-w-lg mb-8">
+              Energieberatung, individuelle Sanierungsfahrpläne, Energieausweise und
+              Heiz-/Kühllastberechnungen aus einer Hand – persönlich und kompetent.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                to="/kontakt"
+                className="inline-flex justify-center px-6 py-3 rounded-lg bg-brand-600 text-white font-medium shadow-sm hover:bg-brand-700 hover:shadow-md transition-all"
+              >
+                Beratungstermin anfragen
+              </Link>
+              <Link
+                to="/leistungen"
+                className="inline-flex justify-center px-6 py-3 rounded-lg border border-brand-200 bg-white text-brand-700 font-medium shadow-sm hover:bg-brand-50 hover:shadow-md transition-all"
+              >
+                Leistungen ansehen
+              </Link>
+            </div>
+          </div>
 
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center">
-          <p className="uppercase tracking-wide text-brand-600 text-sm font-semibold mb-3">
-            Energieberatung
-          </p>
-          <h1 className="text-3xl sm:text-5xl font-bold text-ink-900 mb-6">
-            Ihr Weg zum energieeffizienten Zuhause
-          </h1>
-          <p className="text-ink-500 max-w-2xl mx-auto mb-8">
-            Energieberatung, individuelle Sanierungsfahrpläne, Energieausweise und
-            Heiz-/Kühllastberechnungen aus einer Hand – persönlich und kompetent.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/kontakt"
-              className="inline-flex justify-center px-6 py-3 rounded-lg bg-brand-600 text-white font-medium shadow-sm hover:bg-brand-700 hover:shadow-md transition-all"
-            >
-              Beratungstermin anfragen
-            </Link>
-            <Link
-              to="/leistungen"
-              className="inline-flex justify-center px-6 py-3 rounded-lg border border-brand-200 bg-white text-brand-700 font-medium shadow-sm hover:bg-brand-50 hover:shadow-md transition-all"
-            >
-              Leistungen ansehen
-            </Link>
+          <div className="relative mb-16 lg:mb-0">
+            <img
+              src="hero-house.jpg"
+              alt="Modernes Haus mit Solarpaneelen auf dem Dach"
+              className="w-full aspect-[4/3] object-cover rounded-2xl shadow-lg"
+            />
+            <div className="absolute -bottom-6 left-4 right-4 sm:left-auto sm:right-[-1.5rem] sm:w-72 bg-white rounded-xl shadow-lg p-5 flex items-start gap-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-100">
+                <Leaf className="text-brand-700" size={20} />
+              </div>
+              <div>
+                <p className="font-semibold text-ink-900 leading-snug">
+                  Nachhaltig beraten. Zukunft gestalten.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="bg-brand-50/60 py-14">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {HIGHLIGHTS.map((text) => (
+          {HIGHLIGHTS.map(({ icon: Icon, titel, text }) => (
             <div
-              key={text}
-              className="flex items-start gap-3 bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow"
+              key={titel}
+              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center"
             >
-              <CheckCircle2 className="text-brand-600 shrink-0 mt-0.5" size={20} />
-              <span className="text-sm text-ink-700">{text}</span>
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand-100">
+                <Icon className="text-brand-700" size={22} />
+              </div>
+              <h3 className="font-semibold text-ink-900 mb-1">{titel}</h3>
+              <p className="text-sm text-ink-500">{text}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <p className="text-center uppercase tracking-wide text-brand-600 text-sm font-semibold mb-10">
+            Vertrauen durch Kompetenz
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+            {VERTRAUEN.map(({ icon: Icon, titel }) => (
+              <div key={titel} className="flex flex-col items-center text-center gap-3">
+                <Icon className="text-brand-600" size={28} strokeWidth={1.5} />
+                <span className="text-sm font-medium text-ink-900">{titel}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
