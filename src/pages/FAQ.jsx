@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import useSeo from '../hooks/useSeo.js'
+import useJsonLd from '../hooks/useJsonLd.js'
 
 const FAQS = [
   {
@@ -83,6 +84,19 @@ export default function FAQ() {
     'Häufige Fragen zu Energieberatung & Förderung | Kaiserslautern',
     'Antworten auf häufige Fragen zu Energieberatung, iSFP, Förderungen und Antragstellung – von Luca Ferrandina, Energieeffizienz-Experte in Kaiserslautern.'
   )
+
+  useJsonLd('faq-jsonld', {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map((item) => ({
+      '@type': 'Question',
+      name: item.frage,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.antwort,
+      },
+    })),
+  })
 
   return (
     <section className="max-w-3xl mx-auto px-4 sm:px-6 py-16">

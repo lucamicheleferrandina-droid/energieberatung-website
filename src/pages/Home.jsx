@@ -10,8 +10,19 @@ import {
   Heart,
   Leaf,
   CheckCircle2,
+  MapPin,
 } from 'lucide-react'
 import useSeo from '../hooks/useSeo.js'
+
+const EINZUGSGEBIET = [
+  'Kaiserslautern',
+  'Hochspeyer',
+  'Landstuhl',
+  'Ramstein-Miesenbach',
+  'Enkenbach-Alsenborn',
+  'Otterberg',
+  'Weilerbach',
+]
 
 const VERTRAUEN = [
   { icon: UserCheck, titel: 'Persönlich & unabhängig' },
@@ -182,6 +193,29 @@ export default function Home() {
                 <Icon className="text-brand-600" size={28} strokeWidth={1.5} />
                 <span className="text-sm font-medium text-ink-900">{titel}</span>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+          <div className="flex items-center justify-center gap-2 text-brand-600 mb-4">
+            <MapPin size={20} />
+            <p className="uppercase tracking-wide text-sm font-semibold">Einzugsgebiet</p>
+          </div>
+          <p className="text-ink-500 max-w-2xl mx-auto mb-6">
+            Energieberatung vor Ort in Kaiserslautern und den umliegenden
+            Gemeinden:
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {EINZUGSGEBIET.map((ort) => (
+              <span
+                key={ort}
+                className="px-4 py-2 rounded-full bg-brand-50 border border-brand-100 text-sm text-ink-700"
+              >
+                {ort}
+              </span>
             ))}
           </div>
         </div>
