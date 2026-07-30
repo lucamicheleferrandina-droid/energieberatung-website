@@ -39,7 +39,7 @@ export default function Leistungen() {
           <a
             key={l.slug}
             href={`#${l.slug}`}
-            className="block border border-brand-100 rounded-xl p-6 hover:border-brand-300 transition-colors"
+            className="block border border-brand-100 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-brand-300 transition-all"
           >
             <h2 className="font-semibold text-ink-900 mb-2">{l.titel}</h2>
             <p className="text-sm text-ink-500">{l.kurz}</p>

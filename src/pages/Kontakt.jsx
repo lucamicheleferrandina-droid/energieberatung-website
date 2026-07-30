@@ -79,7 +79,7 @@ export default function Kontakt() {
 
           <button
             type="submit"
-            className="px-6 py-3 rounded-lg bg-brand-600 text-white font-medium hover:bg-brand-700 transition-colors"
+            className="px-6 py-3 rounded-lg bg-brand-600 text-white font-medium shadow-sm hover:bg-brand-700 hover:shadow-md transition-all"
           >
             Anfrage senden
           </button>
