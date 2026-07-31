@@ -108,10 +108,10 @@ export default function Home() {
               Ihre kostenlose Erstberatung
             </h2>
             <p className="text-ink-500 max-w-lg mb-8">
-              In einem unverbindlichen Erstgespräch lernen wir uns kennen, ich
-              verschaffe mir einen ersten Eindruck von Ihrem Vorhaben und Sie
-              erfahren, welche Fördermöglichkeiten für Sie infrage kommen –
-              ganz ohne Kosten und Verpflichtungen.
+              In einem unverbindlichen Erstgespräch verschaffe ich mir einen
+              ersten Eindruck von Ihrem Vorhaben und Sie erfahren, welche
+              Fördermöglichkeiten für Sie infrage kommen – ganz ohne Kosten
+              und Verpflichtungen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
