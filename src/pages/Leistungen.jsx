@@ -80,7 +80,7 @@ export default function Leistungen() {
                 <img
                   src={l.bild}
                   alt={l.bildAlt}
-                  className="w-full sm:w-[220px] aspect-[4/3] object-cover rounded-xl shadow-sm"
+                  className="w-full sm:w-[220px] aspect-[3/4] object-cover rounded-xl shadow-sm"
                 />
               )}
               <p className="text-ink-700 max-w-3xl">{l.text}</p>
