@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 
-const GOOGLE_REVIEWS_URL = 'https://maps.app.goo.gle/ZfXe5vNzFTSrLL'
+export const GOOGLE_REVIEWS_URL = 'https://maps.app.goo.gle/ZfXe5vNzFTSrLL'
 
 const NAV_ITEMS = [
   { to: '/', label: 'Start', end: true },

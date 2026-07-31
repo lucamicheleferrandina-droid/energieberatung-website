@@ -11,8 +11,23 @@ import {
   Leaf,
   CheckCircle2,
   MapPin,
+  Star,
 } from 'lucide-react'
 import useSeo from '../hooks/useSeo.js'
+import { GOOGLE_REVIEWS_URL } from '../components/Layout.jsx'
+
+const TESTIMONIALS = [
+  {
+    name: 'Daniela E.',
+    datum: 'vor 3 Tagen',
+    text: 'Sind bisher sehr zufrieden mit der Zusammenarbeit, haben bisher auch keine Bedenken, dass sich daran etwas ändern wird, danke für die Unterstützung bisher!',
+  },
+  {
+    name: 'Daniela E.',
+    datum: 'vor 17 Wochen',
+    text: 'Wir haben einen individuellen Sanierungsfahrplan bei Luca beauftragt und waren sehr zufrieden. 😄 Kompetente Beratung und zuverlässige, zügige Bearbeitung. So konnten wir genau sehen, welche maximale Förderung bei einer Sanierung möglich ist. 😊',
+  },
+]
 
 const EINZUGSGEBIET = [
   'Kaiserslautern',
@@ -230,6 +245,44 @@ export default function Home() {
                 {ort}
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-24 bg-brand-50/60">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <p className="text-center uppercase tracking-wide text-brand-600 text-sm font-semibold mb-3">
+            Kundenstimmen
+          </p>
+          <h2 className="text-2xl sm:text-4xl font-bold text-ink-900 text-center mb-10">
+            Was Kunden über meine Arbeit sagen
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-10">
+            {TESTIMONIALS.map((t) => (
+              <div
+                key={t.name + t.datum}
+                className="bg-white rounded-xl p-6 shadow-sm border border-brand-100"
+              >
+                <div className="flex items-center gap-1 mb-3">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} size={16} className="fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+                <p className="text-ink-700 mb-4">„{t.text}"</p>
+                <p className="text-sm font-semibold text-ink-900">{t.name}</p>
+                <p className="text-xs text-ink-500">Google-Bewertung · {t.datum}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <a
+              href={GOOGLE_REVIEWS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex justify-center px-6 py-3 rounded-lg border border-brand-200 bg-white text-brand-700 font-medium shadow-sm hover:bg-brand-50 hover:shadow-md transition-all"
+            >
+              Alle Bewertungen auf Google ansehen
+            </a>
           </div>
         </div>
       </section>
