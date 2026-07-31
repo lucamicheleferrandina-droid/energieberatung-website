@@ -45,22 +45,22 @@ const HIGHLIGHTS = [
   {
     icon: HomeIcon,
     titel: 'Energieberatung',
-    text: 'Persönliche Vor-Ort-Beratung zu energetischen Schwachstellen und sinnvollen Maßnahmen.',
+    text: 'Persönliche Vor-Ort-Beratung zu energetischen Schwachstellen und sinnvollen Maßnahmen',
   },
   {
     icon: ClipboardList,
     titel: 'Sanierungsfahrpläne',
-    text: 'Schrittweiser Sanierungsfahrplan (iSFP) mit bis zu 20 % höherem Fördersatz.',
+    text: 'Schrittweiser Sanierungsfahrplan (iSFP) mit bis zu 20 % höherem Fördersatz',
   },
   {
     icon: Award,
     titel: 'Energieausweise',
-    text: 'Energieausweise für Wohngebäude, z. B. für Verkauf oder Vermietung.',
+    text: 'Energieausweise für Wohngebäude, z. B. für Verkauf oder Vermietung',
   },
   {
     icon: Thermometer,
     titel: 'Heiz- & Kühllast',
-    text: 'Fachgerechte Berechnung für eine korrekt dimensionierte Anlagentechnik.',
+    text: 'Fachgerechte Berechnung für eine korrekt dimensionierte Anlagentechnik',
   },
 ]
 
