@@ -57,7 +57,7 @@ const FAQS = [
   },
 ]
 
-function FaqItem({ frage, antwort }) {
+function FaqItem({ nummer, frage, antwort }) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -68,7 +68,9 @@ function FaqItem({ frage, antwort }) {
         aria-expanded={open}
         className="w-full flex items-center justify-between gap-4 py-5 text-left"
       >
-        <span className="font-medium text-ink-900">{frage}</span>
+        <span className="font-medium text-ink-900">
+          {nummer}. {frage}
+        </span>
         <ChevronDown
           className={`shrink-0 text-brand-600 transition-transform ${open ? 'rotate-180' : ''}`}
           size={20}
@@ -108,7 +110,7 @@ export default function FAQ() {
 
       <div>
         {FAQS.map((item, i) => (
-          <FaqItem key={i} frage={item.frage} antwort={item.antwort} />
+          <FaqItem key={i} nummer={i + 1} frage={item.frage} antwort={item.antwort} />
         ))}
       </div>
     </section>
