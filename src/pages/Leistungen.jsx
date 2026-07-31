@@ -24,7 +24,7 @@ const LEISTUNGEN = [
     titel: 'Energieausweise',
     kurz: 'Energieausweise für Wohngebäude, z. B. für Verkauf oder Vermietung.',
     text: 'Ich erstelle Energieausweise für Wohngebäude, wie sie zum Beispiel beim Verkauf oder der Vermietung einer Immobilie gesetzlich vorgeschrieben sind. So erhalten Sie, Ihre Mieter oder Käufer einen transparenten Überblick über den energetischen Zustand des Gebäudes.',
-    bild: 'leistungen-energieausweis.jpg',
+    bild: 'leistungen-energieausweis.png',
     bildAlt: 'Beispiel eines Energieausweises für Wohngebäude',
   },
   {
@@ -75,12 +75,12 @@ export default function Leistungen() {
               </div>
               <h2 className="text-xl font-semibold text-ink-900">{l.titel}</h2>
             </div>
-            <div className={l.bild ? 'grid sm:grid-cols-[320px,1fr] gap-6 items-start' : ''}>
+            <div className={l.bild ? 'grid sm:grid-cols-[260px,1fr] gap-6 items-start' : ''}>
               {l.bild && (
                 <img
                   src={l.bild}
                   alt={l.bildAlt}
-                  className="w-full sm:w-[320px] aspect-[3/4] object-cover rounded-xl shadow-sm"
+                  className="w-full sm:w-[260px] aspect-[3/4] object-cover rounded-xl shadow-sm"
                 />
               )}
               <p className="text-ink-700 max-w-3xl">{l.text}</p>
