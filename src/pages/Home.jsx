@@ -89,6 +89,15 @@ export default function Home() {
               bis zur Umsetzung – ehrlich, praxisnah und mit Blick auf die
               bestmögliche Förderung.
             </p>
+            <h2 className="text-lg font-semibold text-ink-900 mb-2">
+              Ihre kostenlose Erstberatung
+            </h2>
+            <p className="text-ink-500 max-w-lg mb-8">
+              In einem unverbindlichen Erstgespräch lernen wir uns kennen, ich
+              verschaffe mir einen ersten Eindruck von Ihrem Vorhaben und Sie
+              erfahren, welche Fördermöglichkeiten für Sie infrage kommen –
+              ganz ohne Kosten und Verpflichtungen.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/kontakt"
