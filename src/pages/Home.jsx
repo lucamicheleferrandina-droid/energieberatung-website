@@ -27,6 +27,11 @@ const TESTIMONIALS = [
     datum: 'vor 17 Wochen',
     text: 'Wir haben einen individuellen Sanierungsfahrplan bei Luca beauftragt und waren sehr zufrieden. 😄 Kompetente Beratung und zuverlässige, zügige Bearbeitung. So konnten wir genau sehen, welche maximale Förderung bei einer Sanierung möglich ist. 😊',
   },
+  {
+    name: 'Dieter S.',
+    datum: 'vor 3 Stunden',
+    text: 'Wir wurden sehr kompetent von Luca beraten. Wir können seine Arbeit als Energieberater daher nur weiterempfehlen. 👍',
+  },
 ]
 
 const EINZUGSGEBIET = [
