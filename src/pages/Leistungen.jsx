@@ -15,6 +15,8 @@ const LEISTUNGEN = [
     titel: 'Individuelle Sanierungsfahrpläne (iSFP)',
     kurz: 'Schrittweiser Sanierungsfahrplan mit bis zu 20 % höherem Fördersatz.',
     text: 'Der individuelle Sanierungsfahrplan (iSFP) zeigt Ihnen, in welcher Reihenfolge sich Sanierungsmaßnahmen an Ihrem Gebäude energetisch und wirtschaftlich am meisten lohnen. Mit einem iSFP profitieren Sie vom iSFP-Bonus: Der Fördersatz für nachfolgende Einzelmaßnahmen steigt von 15 % auf 20 %, und die förderfähigen Investitionskosten erhöhen sich von 30.000 € auf 60.000 € pro Wohneinheit und Jahr. Zudem haben Sie 15 Jahre Zeit, die vorgeschlagenen Maßnahmen umzusetzen, ohne den Bonus zu verlieren. Die Erstellung des iSFP selbst wird ebenfalls gefördert: 50 % der Kosten, bis 650 € bei 1–2 Wohneinheiten bzw. bis 850 € ab 2 Wohneinheiten.',
+    bild: 'leistungen-isfp.jpg',
+    bildAlt: 'Beispiel eines individuellen Sanierungsfahrplans (iSFP)',
   },
   {
     slug: 'energieausweise',
@@ -22,6 +24,8 @@ const LEISTUNGEN = [
     titel: 'Energieausweise',
     kurz: 'Energieausweise für Wohngebäude, z. B. für Verkauf oder Vermietung.',
     text: 'Ich erstelle Energieausweise für Wohngebäude, wie sie zum Beispiel beim Verkauf oder der Vermietung einer Immobilie gesetzlich vorgeschrieben sind. So erhalten Sie, Ihre Mieter oder Käufer einen transparenten Überblick über den energetischen Zustand des Gebäudes.',
+    bild: 'leistungen-energieausweis.jpg',
+    bildAlt: 'Beispiel eines Energieausweises für Wohngebäude',
   },
   {
     slug: 'heiz-kuehllast',
@@ -64,12 +68,21 @@ export default function Leistungen() {
 
       <div className="space-y-12">
         {LEISTUNGEN.map((l) => (
-          <div key={l.slug} id={l.slug} className="scroll-mt-20 flex gap-5">
-            <div className="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-100">
-              <l.icon className="text-brand-700" size={22} />
+          <div key={l.slug} id={l.slug} className="scroll-mt-20">
+            <div className="flex items-center gap-5 mb-4">
+              <div className="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-100">
+                <l.icon className="text-brand-700" size={22} />
+              </div>
+              <h2 className="text-xl font-semibold text-ink-900">{l.titel}</h2>
             </div>
-            <div>
-              <h2 className="text-xl font-semibold text-ink-900 mb-3">{l.titel}</h2>
+            <div className={l.bild ? 'grid sm:grid-cols-[220px,1fr] gap-6 items-start' : ''}>
+              {l.bild && (
+                <img
+                  src={l.bild}
+                  alt={l.bildAlt}
+                  className="w-full sm:w-[220px] aspect-[4/3] object-cover rounded-xl shadow-sm"
+                />
+              )}
               <p className="text-ink-700 max-w-3xl">{l.text}</p>
             </div>
           </div>
