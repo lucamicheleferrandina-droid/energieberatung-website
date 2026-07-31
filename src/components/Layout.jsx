@@ -8,7 +8,6 @@ const NAV_ITEMS = [
   { to: '/', label: 'Start', end: true },
   { to: '/leistungen', label: 'Leistungen' },
   { to: '/ueber-mich', label: 'Über mich' },
-  { href: GOOGLE_REVIEWS_URL, label: 'Referenzen', external: true },
   { to: '/faq', label: 'FAQs' },
 ]
 
