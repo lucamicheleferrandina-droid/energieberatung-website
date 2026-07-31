@@ -255,7 +255,7 @@ export default function Home() {
             Feedback
           </p>
           <h2 className="text-2xl sm:text-4xl font-bold text-ink-900 text-center mb-10">
-            Was Kunden über meine Arbeit sagen
+            Direktes Feedback zu meiner Arbeit
           </h2>
           <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-10">
             {TESTIMONIALS.map((t) => (
