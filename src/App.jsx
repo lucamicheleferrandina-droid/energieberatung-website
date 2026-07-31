@@ -7,6 +7,7 @@ import Kontakt from './pages/Kontakt.jsx'
 import Impressum from './pages/Impressum.jsx'
 import Datenschutz from './pages/Datenschutz.jsx'
 import FAQ from './pages/FAQ.jsx'
+import Ratgeber from './pages/Ratgeber.jsx'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="leistungen" element={<Leistungen />} />
         <Route path="ueber-mich" element={<UeberMich />} />
+        <Route path="ratgeber" element={<Ratgeber />} />
         <Route path="faq" element={<FAQ />} />
         <Route path="kontakt" element={<Kontakt />} />
         <Route path="impressum" element={<Impressum />} />

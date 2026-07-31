@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { to: '/', label: 'Start', end: true },
   { to: '/leistungen', label: 'Leistungen' },
   { to: '/ueber-mich', label: 'Über mich' },
+  { to: '/ratgeber', label: 'Ratgeber' },
   { to: '/faq', label: 'FAQs' },
 ]
 
