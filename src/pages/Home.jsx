@@ -252,7 +252,7 @@ export default function Home() {
       <section className="py-16 sm:py-24 bg-brand-50/60">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <p className="text-center uppercase tracking-wide text-brand-600 text-sm font-semibold mb-3">
-            Kundenstimmen
+            Feedback
           </p>
           <h2 className="text-2xl sm:text-4xl font-bold text-ink-900 text-center mb-10">
             Was Kunden über meine Arbeit sagen
