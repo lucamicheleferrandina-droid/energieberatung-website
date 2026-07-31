@@ -22,6 +22,10 @@ const EINZUGSGEBIET = [
   'Enkenbach-Alsenborn',
   'Otterberg',
   'Weilerbach',
+  'Eisenberg',
+  'Grünstadt',
+  'Neustadt an der Weinstraße',
+  'Bad Dürkheim',
 ]
 
 const VERTRAUEN = [
