@@ -10,14 +10,6 @@ export default function Datenschutz() {
     <section className="max-w-3xl mx-auto px-4 sm:px-6 py-16 prose prose-ink">
       <h1 className="text-3xl font-bold text-ink-900 mb-6">Datenschutzerklärung</h1>
 
-      <p className="text-sm text-ink-500 bg-brand-50 border border-brand-100 rounded-lg p-4">
-        Hinweis: Dieser Entwurf orientiert sich an den Anforderungen der DSGVO
-        und wurde für den tatsächlichen technischen Aufbau dieser Website
-        erstellt. Er ersetzt keine rechtliche Prüfung – bitte vor
-        Veröffentlichung von einem Anwalt / der zuständigen Kammer gegenprüfen
-        lassen.
-      </p>
-
       <h2 className="font-semibold text-ink-900 mt-8">1. Verantwortlicher</h2>
       <p className="text-ink-700">
         Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:
