@@ -119,6 +119,37 @@ export default function Ratgeber() {
               schützt davor, Fördergeld durch formale Fehler zu verlieren.
             </p>
           </div>
+          <div>
+            <h3 className="font-semibold text-ink-900 mb-2">Ihr Weg zur Förderung</h3>
+            <ol className="list-decimal pl-5 space-y-2 text-ink-700">
+              <li>
+                Kontaktaufnahme mit einem Energieberater
+                <ul className="list-disc pl-5 mt-1">
+                  <li>Maßnahmen durchsprechen</li>
+                </ul>
+              </li>
+              <li>Einholen von Angeboten beim Fachunternehmen</li>
+              <li>Beauftragung beim Energieberater (TPB)</li>
+              <li>Antragstellung bei der BAFA</li>
+              <li>Umsetzung der Maßnahme</li>
+              <li>
+                Einreichen des Verwendungsnachweises durch den
+                Energieberater (TPN)
+              </li>
+              <li>Prüfung und Auszahlung</li>
+            </ol>
+            <p className="text-sm text-ink-500 mt-3">
+              Quelle:{' '}
+              <a
+                href="https://www.bafa.de"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-brand-700"
+              >
+                bafa.de
+              </a>
+            </p>
+          </div>
         </div>
       </div>
 
