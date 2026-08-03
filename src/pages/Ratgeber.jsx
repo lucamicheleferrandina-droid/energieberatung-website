@@ -1,4 +1,16 @@
-import { Newspaper, Banknote, Lightbulb, Wrench } from 'lucide-react'
+import {
+  Newspaper,
+  Banknote,
+  Lightbulb,
+  Wrench,
+  PhoneCall,
+  FileText,
+  Handshake,
+  Send,
+  Hammer,
+  FileCheck,
+  CheckCircle2,
+} from 'lucide-react'
 import useSeo from '../hooks/useSeo.js'
 
 const THEMEN = [
@@ -6,6 +18,23 @@ const THEMEN = [
   { slug: 'foerderungen', icon: Banknote, titel: 'Förderungen' },
   { slug: 'nice-to-know', icon: Lightbulb, titel: 'Nice to know' },
   { slug: 'sanierungsmassnahmen', icon: Wrench, titel: 'Typische Sanierungsmaßnahmen' },
+]
+
+const FOERDERWEG = [
+  {
+    icon: PhoneCall,
+    titel: 'Kontaktaufnahme mit einem Energieberater',
+    text: 'Maßnahmen durchsprechen',
+  },
+  { icon: FileText, titel: 'Einholen von Angeboten beim Fachunternehmen' },
+  { icon: Handshake, titel: 'Beauftragung beim Energieberater (TPB)' },
+  { icon: Send, titel: 'Antragstellung bei der BAFA' },
+  { icon: Hammer, titel: 'Umsetzung der Maßnahme' },
+  {
+    icon: FileCheck,
+    titel: 'Einreichen des Verwendungsnachweises durch den Energieberater (TPN)',
+  },
+  { icon: CheckCircle2, titel: 'Prüfung und Auszahlung' },
 ]
 
 const NICE_TO_KNOW = [
@@ -120,25 +149,29 @@ export default function Ratgeber() {
             </p>
           </div>
           <div>
-            <h3 className="font-semibold text-ink-900 mb-2">Ihr Weg zur Förderung</h3>
-            <ol className="list-decimal pl-5 space-y-2 text-ink-700">
-              <li>
-                Kontaktaufnahme mit einem Energieberater
-                <ul className="list-disc pl-5 mt-1">
-                  <li>Maßnahmen durchsprechen</li>
-                </ul>
-              </li>
-              <li>Einholen von Angeboten beim Fachunternehmen</li>
-              <li>Beauftragung beim Energieberater (TPB)</li>
-              <li>Antragstellung bei der BAFA</li>
-              <li>Umsetzung der Maßnahme</li>
-              <li>
-                Einreichen des Verwendungsnachweises durch den
-                Energieberater (TPN)
-              </li>
-              <li>Prüfung und Auszahlung</li>
-            </ol>
-            <p className="text-sm text-ink-500 mt-3">
+            <h3 className="font-semibold text-ink-900 mb-4">Ihr Weg zur Förderung</h3>
+            <div className="relative">
+              <div className="absolute left-5 top-2 bottom-2 w-px bg-ink-200" />
+              <div className="space-y-7">
+                {FOERDERWEG.map((step, i) => (
+                  <div key={step.titel} className="relative flex gap-4">
+                    <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-600 text-white shadow-sm">
+                      <step.icon size={18} />
+                    </div>
+                    <div className="pt-1.5">
+                      <p className="text-xs font-semibold text-brand-600 uppercase tracking-wide mb-0.5">
+                        Schritt {i + 1}
+                      </p>
+                      <p className="font-medium text-ink-900">{step.titel}</p>
+                      {step.text && (
+                        <p className="text-sm text-ink-500 mt-0.5">{step.text}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p className="text-sm text-ink-500 mt-6">
               Quelle:{' '}
               <a
                 href="https://www.bafa.de"
