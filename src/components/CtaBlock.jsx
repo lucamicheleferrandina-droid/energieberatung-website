@@ -6,7 +6,7 @@ export default function CtaBlock() {
     <section className="bg-brand-50/60 border-t border-brand-100 py-14">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold text-ink-900 mb-3">
-          Fragen zu Ihrem Vorhaben?
+          Jetzt in Ihr energieeffizientes Zuhause starten
         </h2>
         <p className="text-ink-500 mb-8">
           Im kostenlosen Erstgespräch klären wir unverbindlich, welche
