@@ -32,6 +32,11 @@ const TESTIMONIALS = [
     datum: 'vor 3 Stunden',
     text: 'Wir wurden sehr kompetent von Luca beraten. Wir können seine Arbeit als Energieberater daher nur weiterempfehlen. 👍',
   },
+  {
+    name: 'Harald F.',
+    datum: 'vor 9 Stunden',
+    text: 'Ich habe Luca für die Förderung meiner Fenstersanierung (Einzelmaßnahme) beauftragt und bin sehr zufrieden. Der Kontakt war von Anfang an freundlich und unkompliziert. Alles wurde zügig bearbeitet und der gesamte Ablauf war schnell und reibungslos. Bei Fragen habe ich immer zeitnah eine Rückmeldung erhalten. Ich kann die Zusammenarbeit weiterempfehlen.',
+  },
 ]
 
 const EINZUGSGEBIET = [
