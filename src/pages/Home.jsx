@@ -280,7 +280,7 @@ export default function Home() {
                 </div>
                 <p className="text-ink-700 mb-4">„{t.text}"</p>
                 <p className="text-sm font-semibold text-ink-900">{t.name}</p>
-                <p className="text-xs text-ink-500">Google-Bewertung · {t.datum}</p>
+                <p className="text-xs text-ink-500">Google-Bewertung</p>
               </div>
             ))}
           </div>
