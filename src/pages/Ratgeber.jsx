@@ -53,6 +53,19 @@ const OFFIZIELLE_LINKS = [
   },
 ]
 
+const DOWNLOAD_DOKUMENTE = [
+  {
+    titel: 'Checkliste: Vorbereitung auf Ihr Erstgespräch',
+    text: 'Eine kurze Übersicht, welche Angaben und Unterlagen für das Erstgespräch hilfreich sind – kein Muss, aber eine gute Vorbereitung.',
+    href: 'checkliste-erstgespraech.pdf',
+  },
+  {
+    titel: 'Kontaktdatenblatt',
+    text: 'Formular für Ihre Antragsteller- und Gebäudedaten, die für Angebot und BAFA-/KfW-Förderantrag benötigt werden.',
+    href: 'kontaktdatenblatt.pdf',
+  },
+]
+
 const FOERDERWEG = [
   {
     icon: PhoneCall,
@@ -426,29 +439,30 @@ export default function Ratgeber() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-ink-900 mb-3">Checkliste zum Download</h3>
-            <div className="flex items-start gap-4 border border-brand-100 rounded-xl p-5 shadow-sm">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-100">
-                <FileText className="text-brand-700" size={22} />
-              </div>
-              <div className="flex-1">
-                <p className="font-semibold text-ink-900 mb-1">
-                  Checkliste: Vorbereitung auf Ihr Erstgespräch
-                </p>
-                <p className="text-sm text-ink-500 mb-3">
-                  Eine kurze Übersicht, welche Angaben und Unterlagen für das
-                  Erstgespräch hilfreich sind – kein Muss, aber eine gute
-                  Vorbereitung.
-                </p>
-                <a
-                  href="checkliste-erstgespraech.pdf"
-                  download
-                  className="inline-flex items-center gap-2 text-sm font-medium text-brand-700 hover:text-brand-800"
+            <h3 className="font-semibold text-ink-900 mb-3">Dokumente zum Download</h3>
+            <div className="space-y-4">
+              {DOWNLOAD_DOKUMENTE.map((doc) => (
+                <div
+                  key={doc.titel}
+                  className="flex items-start gap-4 border border-brand-100 rounded-xl p-5 shadow-sm"
                 >
-                  <Download size={16} />
-                  PDF herunterladen
-                </a>
-              </div>
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-100">
+                    <FileText className="text-brand-700" size={22} />
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-semibold text-ink-900 mb-1">{doc.titel}</p>
+                    <p className="text-sm text-ink-500 mb-3">{doc.text}</p>
+                    <a
+                      href={doc.href}
+                      download
+                      className="inline-flex items-center gap-2 text-sm font-medium text-brand-700 hover:text-brand-800"
+                    >
+                      <Download size={16} />
+                      PDF herunterladen
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
