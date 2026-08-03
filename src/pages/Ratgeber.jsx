@@ -36,7 +36,7 @@ const THEMEN = [
   { slug: 'aktuelles', icon: Newspaper, titel: 'Aktuelles' },
   { slug: 'foerderungen', icon: Banknote, titel: 'Förderungen' },
   { slug: 'nice-to-know', icon: Lightbulb, titel: 'Nice to know' },
-  { slug: 'sanierungsmassnahmen', icon: Wrench, titel: 'Typische Sanierungsmaßnahmen' },
+  { slug: 'sanierungsmassnahmen', icon: Wrench, titel: 'Sanierungsmaßnahmen' },
   { slug: 'downloads', icon: Download, titel: 'Downloads' },
 ]
 
@@ -155,7 +155,7 @@ export default function Ratgeber() {
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand-100">
               <t.icon className="text-brand-700" size={22} />
             </div>
-            <h2 className="font-semibold text-ink-900">{t.titel}</h2>
+            <h2 className="font-semibold text-ink-900 break-words">{t.titel}</h2>
           </a>
         ))}
       </div>
