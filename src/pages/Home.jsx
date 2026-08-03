@@ -19,23 +19,23 @@ import { GOOGLE_REVIEWS_URL } from '../components/Layout.jsx'
 const TESTIMONIALS = [
   {
     name: 'Daniela E.',
-    datum: 'vor 3 Tagen',
-    text: 'Sind bisher sehr zufrieden mit der Zusammenarbeit, haben bisher auch keine Bedenken, dass sich daran etwas ändern wird, danke für die Unterstützung bisher!',
-  },
-  {
-    name: 'Daniela E.',
-    datum: 'vor 17 Wochen',
+    kontext: 'Sanierungsfahrplan (iSFP)',
     text: 'Wir haben einen individuellen Sanierungsfahrplan bei Luca beauftragt und waren sehr zufrieden. 😄 Kompetente Beratung und zuverlässige, zügige Bearbeitung. So konnten wir genau sehen, welche maximale Förderung bei einer Sanierung möglich ist. 😊',
   },
   {
+    name: 'Harald F.',
+    kontext: 'Fenstersanierung',
+    text: 'Ich habe Luca für die Förderung meiner Fenstersanierung (Einzelmaßnahme) beauftragt und bin sehr zufrieden. Der Kontakt war von Anfang an freundlich und unkompliziert. Alles wurde zügig bearbeitet und der gesamte Ablauf war schnell und reibungslos. Bei Fragen habe ich immer zeitnah eine Rückmeldung erhalten. Ich kann die Zusammenarbeit weiterempfehlen.',
+  },
+  {
     name: 'Dieter S.',
-    datum: 'vor 3 Stunden',
+    kontext: 'Energieberatung',
     text: 'Wir wurden sehr kompetent von Luca beraten. Wir können seine Arbeit als Energieberater daher nur weiterempfehlen. 👍',
   },
   {
-    name: 'Harald F.',
-    datum: 'vor 9 Stunden',
-    text: 'Ich habe Luca für die Förderung meiner Fenstersanierung (Einzelmaßnahme) beauftragt und bin sehr zufrieden. Der Kontakt war von Anfang an freundlich und unkompliziert. Alles wurde zügig bearbeitet und der gesamte Ablauf war schnell und reibungslos. Bei Fragen habe ich immer zeitnah eine Rückmeldung erhalten. Ich kann die Zusammenarbeit weiterempfehlen.',
+    name: 'Daniela E.',
+    kontext: 'Laufende Zusammenarbeit',
+    text: 'Sind bisher sehr zufrieden mit der Zusammenarbeit, haben bisher auch keine Bedenken, dass sich daran etwas ändern wird, danke für die Unterstützung bisher!',
   },
 ]
 
@@ -106,23 +106,24 @@ export default function Home() {
             <h1 className="text-3xl sm:text-5xl font-bold text-ink-900 mb-6">
               Ihr Weg zum energieeffizienten Zuhause
             </h1>
-            <p className="text-ink-500 max-w-lg mb-8">
-              Ein energieeffizientes Zuhause spart nicht nur Heizkosten, sondern
-              steigert auch Ihren Wohnkomfort und schont langfristig die Umwelt.
-              Als zertifizierter Energieeffizienz-Experte begleite ich Sie in
-              Kaiserslautern und Umgebung persönlich von der ersten Beratung
-              bis zur Umsetzung – ehrlich, praxisnah und mit Blick auf die
-              bestmögliche Förderung.
+            <p className="text-ink-500 max-w-lg mb-6">
+              Weniger Heizkosten, mehr Wohnkomfort und die bestmögliche
+              Förderung – als zertifizierter Energieeffizienz-Experte
+              begleite ich Sie in Kaiserslautern und Umgebung persönlich von
+              der ersten Beratung bis zur Umsetzung.
             </p>
-            <h2 className="text-lg font-semibold text-ink-900 mb-2">
-              Ihre kostenlose Erstberatung
-            </h2>
-            <p className="text-ink-500 max-w-lg mb-8">
-              In einem unverbindlichen Erstgespräch verschaffe ich mir einen
-              ersten Eindruck von Ihrem Vorhaben und Sie erfahren, welche
-              Fördermöglichkeiten für Sie infrage kommen – ganz ohne Kosten
-              und Verpflichtungen.
-            </p>
+            <div className="max-w-lg mb-8 flex items-start gap-3 rounded-xl bg-brand-50 border border-brand-100 p-4">
+              <CheckCircle2 className="text-brand-600 shrink-0 mt-0.5" size={20} />
+              <div>
+                <p className="font-semibold text-ink-900 mb-1">
+                  Erstgespräch kostenlos &amp; unverbindlich
+                </p>
+                <p className="text-sm text-ink-500">
+                  Wir klären, welche Maßnahmen für Ihr Gebäude sinnvoll sind
+                  und welche Fördermittel Sie nutzen können.
+                </p>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/kontakt"
@@ -270,7 +271,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-10">
             {TESTIMONIALS.map((t) => (
               <div
-                key={t.name + t.datum}
+                key={t.name + t.kontext}
                 className="bg-white rounded-xl p-6 shadow-sm border border-brand-100"
               >
                 <div className="flex items-center gap-1 mb-3">
@@ -279,7 +280,9 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-ink-700 mb-4">„{t.text}"</p>
-                <p className="text-sm font-semibold text-ink-900">{t.name}</p>
+                <p className="text-sm font-semibold text-ink-900">
+                  {t.name} · {t.kontext}
+                </p>
                 <p className="text-xs text-ink-500">Google-Bewertung</p>
               </div>
             ))}

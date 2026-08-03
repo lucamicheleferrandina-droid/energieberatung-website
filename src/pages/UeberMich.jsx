@@ -1,4 +1,5 @@
 import useSeo from '../hooks/useSeo.js'
+import CtaBlock from '../components/CtaBlock.jsx'
 
 const WERDEGANG = [
   { jahr: '2021–2025', text: 'Hochschulstudium Maschinenbau-Verfahrenstechnik' },
@@ -15,6 +16,7 @@ export default function UeberMich() {
   )
 
   return (
+    <>
     <section className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
       <h1 className="text-3xl font-bold text-ink-900 mb-8 text-center">Über mich</h1>
 
@@ -24,19 +26,32 @@ export default function UeberMich() {
         className="w-56 sm:w-64 aspect-[4/5] mx-auto rounded-xl object-cover border border-brand-100 mb-8"
       />
 
-      <p className="text-ink-700 text-center max-w-xl mx-auto mb-14">
-        Mein Name ist Luca Ferrandina, seit 2025 zertifizierter
-        Energieeffizienz-Experte. Mit meinem Hintergrund als
-        Maschinenbau-Verfahrenstechniker und meiner Erfahrung als
-        TGA-Ingenieur in der chemischen Industrie bringe ich fundiertes
-        technisches Wissen in jede Beratung ein. Dabei ist mir vor allem
-        eines wichtig: ehrliche, praxisnahe Empfehlungen, die sich für Sie
-        wirtschaftlich lohnen – inklusive der bestmöglichen Ausschöpfung
-        staatlicher Förderprogramme. Mit großem Interesse an nachhaltigen
-        Lösungen und ausgeprägter Technikbegeisterung begleite ich Sie
-        kompetent auf dem Weg zu
-        einem energieeffizienten Zuhause.
-      </p>
+      <div className="space-y-4 text-ink-700 mb-14">
+        <p>
+          Mein Name ist Luca Ferrandina. Seit 2025 bin ich zertifizierter
+          Energieeffizienz-Experte und berate Eigentümerinnen und Eigentümer
+          in Kaiserslautern und Umgebung rund um energetische Sanierung und
+          Förderung.
+        </p>
+        <p>
+          Vor der Energieberatung habe ich Maschinenbau-Verfahrenstechnik
+          studiert und als TGA-Ingenieur in der chemischen Industrie
+          gearbeitet – dort, wo Anlagentechnik zuverlässig und effizient
+          laufen muss. Diesen technischen Hintergrund bringe ich in jede
+          Beratung ein: Ich beurteile Gebäude- und Anlagentechnik nicht nur
+          nach Datenblatt, sondern mit Blick darauf, was im täglichen
+          Betrieb tatsächlich funktioniert.
+        </p>
+        <h2 className="text-xl font-semibold text-ink-900 pt-2">Wie ich arbeite</h2>
+        <p>
+          Ehrlichkeit steht für mich an erster Stelle – ich sage Ihnen auch,
+          wenn sich eine Maßnahme für Sie wirtschaftlich nicht lohnt. Meine
+          Empfehlungen sind praxisnah und darauf ausgelegt, dass sie sich
+          rechnen, inklusive der bestmöglichen Ausschöpfung staatlicher
+          Förderprogramme. Nachhaltige Lösungen und die Technik dahinter
+          begeistern mich dabei ganz persönlich.
+        </p>
+      </div>
 
       <h2 className="text-xl font-semibold text-ink-900 mb-6">Werdegang</h2>
       <ol className="space-y-4 border-l-2 border-brand-100 pl-6">
@@ -49,5 +64,7 @@ export default function UeberMich() {
         ))}
       </ol>
     </section>
+    <CtaBlock />
+    </>
   )
 }

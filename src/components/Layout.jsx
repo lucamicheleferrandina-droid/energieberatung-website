@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Mail, Phone } from 'lucide-react'
 
 export const GOOGLE_REVIEWS_URL = 'https://maps.app.goo.gle/ZfXe5vNzFTSrLL'
 
@@ -105,14 +105,32 @@ export default function Layout() {
         <Outlet />
       </main>
 
-      <footer className="border-t border-brand-100 mt-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink-500">
-          <span>
-            © {new Date().getFullYear()} Luca Ferrandina – Energieberatung Kaiserslautern und Umgebung
-          </span>
-          <div className="flex gap-4">
-            <Link to="/impressum" className="hover:text-brand-700">Impressum</Link>
-            <Link to="/datenschutz" className="hover:text-brand-700">Datenschutz</Link>
+      <footer className="border-t border-brand-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-ink-700 mb-8">
+            <a
+              href="mailto:info@meine-energieberatung.com"
+              className="flex items-center gap-2 hover:text-brand-700"
+            >
+              <Mail size={18} className="text-brand-600" />
+              info@meine-energieberatung.com
+            </a>
+            <a
+              href="tel:+4917668270350"
+              className="flex items-center gap-2 hover:text-brand-700"
+            >
+              <Phone size={18} className="text-brand-600" />
+              0176 68270350
+            </a>
+          </div>
+          <div className="border-t border-brand-100 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink-500">
+            <span className="text-center sm:text-left">
+              © {new Date().getFullYear()} Luca Ferrandina – Energieberatung Kaiserslautern und Umgebung
+            </span>
+            <div className="flex gap-4">
+              <Link to="/impressum" className="hover:text-brand-700">Impressum</Link>
+              <Link to="/datenschutz" className="hover:text-brand-700">Datenschutz</Link>
+            </div>
           </div>
         </div>
       </footer>

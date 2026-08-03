@@ -12,6 +12,23 @@ import {
   CheckCircle2,
 } from 'lucide-react'
 import useSeo from '../hooks/useSeo.js'
+import CtaBlock from '../components/CtaBlock.jsx'
+
+function Eckwerte({ werte }) {
+  return (
+    <div className="flex flex-wrap gap-3 mb-4">
+      {werte.map((w) => (
+        <div
+          key={w.label}
+          className="rounded-lg border border-brand-100 bg-brand-50/60 px-4 py-2"
+        >
+          <p className="text-base font-bold text-brand-600 leading-tight">{w.wert}</p>
+          <p className="text-xs text-ink-500">{w.label}</p>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 const THEMEN = [
   { slug: 'aktuelles', icon: Newspaper, titel: 'Aktuelles' },
@@ -90,6 +107,7 @@ export default function Ratgeber() {
   )
 
   return (
+    <>
     <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
       <h1 className="text-3xl font-bold text-ink-900 mb-3">Ratgeber</h1>
       <p className="text-ink-500 mb-10 max-w-2xl">
@@ -196,9 +214,17 @@ export default function Ratgeber() {
         </div>
         <div className="space-y-6 max-w-3xl">
           <div>
-            <h3 className="font-semibold text-ink-900 mb-2">
+            <h3 className="font-semibold text-ink-900 mb-3">
               BEG-Einzelmaßnahmen (Gebäudehülle & Anlagentechnik)
             </h3>
+            <Eckwerte
+              werte={[
+                { wert: '15 %', label: 'Grundförderung' },
+                { wert: '20 %', label: 'mit iSFP' },
+                { wert: '60.000 €', label: 'förderfähig mit iSFP' },
+                { wert: '50 %', label: 'Fachplanung & Baubegleitung' },
+              ]}
+            />
             <p className="text-ink-700">
               Für einzelne Sanierungsmaßnahmen (Gebäudehülle, Anlagentechnik
               außer Heizung) gilt eine Grundförderung von 15 % der
@@ -213,9 +239,17 @@ export default function Ratgeber() {
             </p>
           </div>
           <div>
-            <h3 className="font-semibold text-ink-900 mb-2">
+            <h3 className="font-semibold text-ink-900 mb-3">
               Heizungstausch oder Erstmaliger Einbau (KfW 458)
             </h3>
+            <Eckwerte
+              werte={[
+                { wert: '30 %', label: 'Grundförderung' },
+                { wert: '+16 %', label: 'Klimageschwindigkeit' },
+                { wert: '+30 %', label: 'Einkommensbonus' },
+                { wert: 'max. 70 %', label: 'Förderquote gesamt' },
+              ]}
+            />
             <p className="text-ink-700 mb-3">
               Für den Austausch bzw. Ersteinbau förderfähiger Heiztechnik
               (solarthermische Anlagen, Biomasseheizungen, elektrisch
@@ -247,7 +281,14 @@ export default function Ratgeber() {
             </p>
           </div>
           <div>
-            <h3 className="font-semibold text-ink-900 mb-2">iSFP-Erstellung selbst</h3>
+            <h3 className="font-semibold text-ink-900 mb-3">iSFP-Erstellung selbst</h3>
+            <Eckwerte
+              werte={[
+                { wert: '50 %', label: 'der Kosten' },
+                { wert: 'bis 650 €', label: '1–2 Wohneinheiten' },
+                { wert: 'bis 850 €', label: 'ab 2 Wohneinheiten' },
+              ]}
+            />
             <p className="text-ink-700">
               Auch die Erstellung des individuellen Sanierungsfahrplans wird
               gefördert: 50 % der Kosten, gedeckelt auf 650 € (1–2
@@ -255,9 +296,15 @@ export default function Ratgeber() {
             </p>
           </div>
           <div>
-            <h3 className="font-semibold text-ink-900 mb-2">
+            <h3 className="font-semibold text-ink-900 mb-3">
               Komplettsanierung zum Effizienzhaus (KfW 261)
             </h3>
+            <Eckwerte
+              werte={[
+                { wert: '5–45 %', label: 'je Effizienzhaus-Stufe' },
+                { wert: '150.000 €', label: 'max. pro Wohneinheit' },
+              ]}
+            />
             <p className="text-ink-700">
               Wer sein Gebäude in einem Zug umfassend saniert (oder ein
               frisch saniertes Gebäude kauft) und dabei mindestens die
@@ -330,5 +377,7 @@ export default function Ratgeber() {
         </div>
       </div>
     </section>
+    <CtaBlock />
+    </>
   )
 }

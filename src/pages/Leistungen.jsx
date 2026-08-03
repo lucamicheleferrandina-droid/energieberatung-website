@@ -1,5 +1,6 @@
 import { Home as HomeIcon, ClipboardList, Award, Thermometer } from 'lucide-react'
 import useSeo from '../hooks/useSeo.js'
+import CtaBlock from '../components/CtaBlock.jsx'
 
 const LEISTUNGEN = [
   {
@@ -43,6 +44,7 @@ export default function Leistungen() {
   )
 
   return (
+    <>
     <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
       <h1 className="text-3xl font-bold text-ink-900 mb-3">Leistungen</h1>
       <p className="text-ink-500 mb-10 max-w-2xl">
@@ -89,5 +91,7 @@ export default function Leistungen() {
         ))}
       </div>
     </section>
+    <CtaBlock />
+    </>
   )
 }

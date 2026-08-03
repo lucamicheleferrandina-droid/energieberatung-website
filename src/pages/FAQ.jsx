@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import useSeo from '../hooks/useSeo.js'
 import useJsonLd from '../hooks/useJsonLd.js'
+import CtaBlock from '../components/CtaBlock.jsx'
 
 const FAQS = [
   {
@@ -101,6 +102,7 @@ export default function FAQ() {
   })
 
   return (
+    <>
     <section className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
       <h1 className="text-3xl font-bold text-ink-900 mb-3">Häufige Fragen</h1>
       <p className="text-ink-500 mb-10 max-w-2xl">
@@ -114,5 +116,7 @@ export default function FAQ() {
         ))}
       </div>
     </section>
+    <CtaBlock />
+    </>
   )
 }

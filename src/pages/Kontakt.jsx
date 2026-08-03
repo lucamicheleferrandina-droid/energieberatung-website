@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Mail, Phone } from 'lucide-react'
+import { Mail, Phone, CheckCircle2 } from 'lucide-react'
 import useSeo from '../hooks/useSeo.js'
 
 const FORM_ENDPOINT = 'https://formspree.io/f/mkodewqj'
@@ -32,8 +32,10 @@ export default function Kontakt() {
     <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
       <h1 className="text-3xl font-bold text-ink-900 mb-3">Kontakt</h1>
       <p className="text-ink-500 mb-10 max-w-2xl">
-        Sie möchten eine Beratung anfragen? Schreiben Sie mir gerne über das
-        Formular oder direkt per E-Mail/Telefon.
+        Sie möchten wissen, welche Maßnahmen sich für Ihr Gebäude lohnen und
+        welche Förderung möglich ist? Das Erstgespräch ist kostenlos und
+        unverbindlich – schreiben Sie mir über das Formular oder melden Sie
+        sich direkt per Telefon oder E-Mail.
       </p>
 
       <div className="grid sm:grid-cols-2 gap-12">
@@ -41,8 +43,9 @@ export default function Kontakt() {
           <fieldset className="space-y-4">
             <legend className="font-semibold text-ink-900 mb-2">Persönliche Daten</legend>
             <Field id="name" label="Name" required />
-            <Field id="adresse" label="Ihre Adresse" required />
             <Field id="email" label="E-Mail" type="email" required />
+            <Field id="telefon" label="Telefon (optional)" type="tel" />
+            <Field id="adresse" label="Ihre Adresse (optional)" />
           </fieldset>
 
           <fieldset className="space-y-4">
@@ -91,15 +94,35 @@ export default function Kontakt() {
           </button>
         </form>
 
-        <div className="space-y-4 text-ink-700">
-          <a href="mailto:info@meine-energieberatung.com" className="flex items-center gap-3 hover:text-brand-700">
-            <Mail size={20} className="text-brand-600" />
-            info@meine-energieberatung.com
-          </a>
-          <a href="tel:+4917668270350" className="flex items-center gap-3 hover:text-brand-700">
-            <Phone size={20} className="text-brand-600" />
-            0176 68270350
-          </a>
+        <div className="space-y-8">
+          <div className="rounded-xl bg-brand-50/60 border border-brand-100 p-6">
+            <h2 className="font-semibold text-ink-900 mb-4">
+              Was passiert nach Ihrer Anfrage?
+            </h2>
+            <ul className="space-y-3">
+              {[
+                'Ihre Anfrage kommt direkt bei mir per E-Mail an.',
+                'Ich melde mich zeitnah bei Ihnen zurück.',
+                'Im Erstgespräch klären wir Ihr Vorhaben – kostenlos und unverbindlich.',
+              ].map((text) => (
+                <li key={text} className="flex items-start gap-3">
+                  <CheckCircle2 className="text-brand-600 shrink-0 mt-0.5" size={18} />
+                  <span className="text-sm text-ink-700">{text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="space-y-4 text-ink-700">
+            <a href="mailto:info@meine-energieberatung.com" className="flex items-center gap-3 hover:text-brand-700">
+              <Mail size={20} className="text-brand-600" />
+              info@meine-energieberatung.com
+            </a>
+            <a href="tel:+4917668270350" className="flex items-center gap-3 hover:text-brand-700">
+              <Phone size={20} className="text-brand-600" />
+              0176 68270350
+            </a>
+          </div>
         </div>
       </div>
     </section>
