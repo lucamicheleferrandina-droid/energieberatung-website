@@ -10,6 +10,8 @@ import {
   Hammer,
   FileCheck,
   CheckCircle2,
+  Download,
+  ExternalLink,
 } from 'lucide-react'
 import useSeo from '../hooks/useSeo.js'
 import CtaBlock from '../components/CtaBlock.jsx'
@@ -35,6 +37,20 @@ const THEMEN = [
   { slug: 'foerderungen', icon: Banknote, titel: 'Förderungen' },
   { slug: 'nice-to-know', icon: Lightbulb, titel: 'Nice to know' },
   { slug: 'sanierungsmassnahmen', icon: Wrench, titel: 'Typische Sanierungsmaßnahmen' },
+  { slug: 'downloads', icon: Download, titel: 'Downloads' },
+]
+
+const OFFIZIELLE_LINKS = [
+  {
+    titel: 'BAFA – Bundesamt für Wirtschaft und Ausfuhrkontrolle',
+    text: 'Antragstellung für Einzelmaßnahmen und den individuellen Sanierungsfahrplan (iSFP).',
+    href: 'https://www.bafa.de',
+  },
+  {
+    titel: 'KfW – Förderprodukte',
+    text: 'Kredite und Zuschüsse für Heizungstausch, Komplettsanierung und Ergänzungskredite.',
+    href: 'https://www.kfw.de',
+  },
 ]
 
 const FOERDERWEG = [
@@ -116,7 +132,7 @@ export default function Ratgeber() {
         verständlich und auf dem aktuellen Stand.
       </p>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
         {THEMEN.map((t) => (
           <a
             key={t.slug}
@@ -358,7 +374,7 @@ export default function Ratgeber() {
       </div>
 
       {/* Typische Sanierungsmaßnahmen */}
-      <div id="sanierungsmassnahmen" className="scroll-mt-20">
+      <div id="sanierungsmassnahmen" className="scroll-mt-20 mb-16">
         <div className="flex items-center gap-5 mb-6">
           <div className="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-100">
             <Wrench className="text-brand-700" size={22} />
@@ -374,6 +390,67 @@ export default function Ratgeber() {
               <p className="text-ink-700">{item.text}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Downloads */}
+      <div id="downloads" className="scroll-mt-20">
+        <div className="flex items-center gap-5 mb-6">
+          <div className="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-100">
+            <Download className="text-brand-700" size={22} />
+          </div>
+          <h2 className="text-xl font-semibold text-ink-900">Downloads</h2>
+        </div>
+        <div className="space-y-8 max-w-3xl">
+          <div>
+            <h3 className="font-semibold text-ink-900 mb-3">
+              Offizielle Anlaufstellen
+            </h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {OFFIZIELLE_LINKS.map((l) => (
+                <a
+                  key={l.titel}
+                  href={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block border border-brand-100 rounded-xl p-5 shadow-sm hover:shadow-md hover:border-brand-300 transition-all"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="font-semibold text-ink-900">{l.titel}</span>
+                    <ExternalLink size={14} className="text-brand-600 shrink-0" />
+                  </div>
+                  <p className="text-sm text-ink-500">{l.text}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-ink-900 mb-3">Checkliste zum Download</h3>
+            <div className="flex items-start gap-4 border border-brand-100 rounded-xl p-5 shadow-sm">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-100">
+                <FileText className="text-brand-700" size={22} />
+              </div>
+              <div className="flex-1">
+                <p className="font-semibold text-ink-900 mb-1">
+                  Checkliste: Vorbereitung auf Ihr Erstgespräch
+                </p>
+                <p className="text-sm text-ink-500 mb-3">
+                  Eine kurze Übersicht, welche Angaben und Unterlagen für das
+                  Erstgespräch hilfreich sind – kein Muss, aber eine gute
+                  Vorbereitung.
+                </p>
+                <a
+                  href="checkliste-erstgespraech.pdf"
+                  download
+                  className="inline-flex items-center gap-2 text-sm font-medium text-brand-700 hover:text-brand-800"
+                >
+                  <Download size={16} />
+                  PDF herunterladen
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

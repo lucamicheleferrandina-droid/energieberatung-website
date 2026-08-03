@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Mail, Phone, CheckCircle2 } from 'lucide-react'
+import WhatsAppIcon from '../components/WhatsAppIcon.jsx'
 import useSeo from '../hooks/useSeo.js'
 
 const FORM_ENDPOINT = 'https://formspree.io/f/mkodewqj'
@@ -121,6 +122,15 @@ export default function Kontakt() {
             <a href="tel:+4917668270350" className="flex items-center gap-3 hover:text-brand-700">
               <Phone size={20} className="text-brand-600" />
               0176 68270350
+            </a>
+            <a
+              href="https://wa.me/4917668270350"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 hover:text-brand-700"
+            >
+              <WhatsAppIcon size={20} className="text-brand-600" />
+              Per WhatsApp schreiben
             </a>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import { Menu, X, Mail, Phone } from 'lucide-react'
+import WhatsAppIcon from './WhatsAppIcon.jsx'
 
 export const GOOGLE_REVIEWS_URL = 'https://maps.app.goo.gle/ZfXe5vNzFTSrLL'
 
@@ -121,6 +122,15 @@ export default function Layout() {
             >
               <Phone size={18} className="text-brand-600" />
               0176 68270350
+            </a>
+            <a
+              href="https://wa.me/4917668270350"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-brand-700"
+            >
+              <WhatsAppIcon size={18} className="text-brand-600" />
+              WhatsApp
             </a>
           </div>
           <div className="border-t border-brand-100 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink-500">
