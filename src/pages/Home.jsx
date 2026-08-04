@@ -16,6 +16,13 @@ import {
 import useSeo from '../hooks/useSeo.js'
 import { GOOGLE_REVIEWS_URL } from '../components/Layout.jsx'
 
+const PARTNER = [
+  { name: 'BAFA', logo: 'partner-bafa.png' },
+  { name: 'KfW', logo: 'partner-kfw.png' },
+  { name: 'dena', logo: 'partner-dena.png' },
+  { name: 'Flor Markisen', logo: 'partner-flor-markisen.png' },
+]
+
 const TESTIMONIALS = [
   {
     name: 'Daniela E.',
@@ -296,6 +303,26 @@ export default function Home() {
             >
               Alle Bewertungen auf Google ansehen
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <p className="text-center uppercase tracking-wide text-brand-600 text-sm font-semibold mb-10">
+            Partner
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+            {PARTNER.map((p) => (
+              <div key={p.name} className="flex flex-col items-center gap-3">
+                <img
+                  src={p.logo}
+                  alt={p.name}
+                  className="h-12 max-w-full object-contain"
+                />
+                <span className="text-sm text-ink-500">{p.name}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
