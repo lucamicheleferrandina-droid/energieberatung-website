@@ -17,10 +17,14 @@ import useSeo from '../hooks/useSeo.js'
 import { GOOGLE_REVIEWS_URL } from '../components/Layout.jsx'
 
 const PARTNER = [
-  { name: 'BAFA', logo: 'partner-bafa.png' },
-  { name: 'KfW', logo: 'partner-kfw.png' },
-  { name: 'dena', logo: 'partner-dena.png' },
-  { name: 'Flor Markisen', logo: 'partner-flor-markisen.png' },
+  { name: 'BAFA', logo: 'partner-bafa.png', href: 'https://www.bafa.de' },
+  { name: 'KfW', logo: 'partner-kfw.png', href: 'https://www.kfw.de' },
+  { name: 'dena', logo: 'partner-dena.png', href: 'https://www.dena.de' },
+  {
+    name: 'Flor Markisen',
+    logo: 'partner-flor-markisen.png',
+    href: 'https://www.flor-markisen.de',
+  },
 ]
 
 const TESTIMONIALS = [
@@ -314,14 +318,19 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
             {PARTNER.map((p) => (
-              <div key={p.name} className="flex flex-col items-center gap-3">
+              <a
+                key={p.name}
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
                 <img
                   src={p.logo}
                   alt={p.name}
                   className="h-12 max-w-full object-contain"
                 />
-                <span className="text-sm text-ink-500">{p.name}</span>
-              </div>
+              </a>
             ))}
           </div>
         </div>
