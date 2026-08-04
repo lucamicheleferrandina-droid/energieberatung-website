@@ -151,22 +151,25 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mb-16 lg:mb-0">
-            <img
-              src="hero-house.jpg"
-              alt="Modernes Haus mit Solarpaneelen auf dem Dach"
-              className="w-full aspect-[4/3] object-cover rounded-2xl shadow-lg"
-            />
-            <div className="absolute -bottom-6 left-4 right-4 sm:left-auto sm:right-[-1.5rem] sm:w-72 bg-white rounded-xl shadow-lg p-5 flex items-start gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-100">
-                <Leaf className="text-brand-700" size={20} />
-              </div>
-              <div>
-                <p className="font-semibold text-ink-900 leading-snug">
-                  Nachhaltig beraten. Zukunft gestalten.
-                </p>
+          <div className="mb-16 lg:mb-0">
+            <div className="relative">
+              <img
+                src="hero-house.jpg"
+                alt="Modernes Haus mit Solarpaneelen auf dem Dach"
+                className="w-full aspect-[4/3] object-cover rounded-2xl shadow-lg"
+              />
+              <div className="absolute -bottom-6 left-4 right-4 sm:left-auto sm:right-[-1.5rem] sm:w-72 bg-white rounded-xl shadow-lg p-5 flex items-start gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-100">
+                  <Leaf className="text-brand-700" size={20} />
+                </div>
+                <div>
+                  <p className="font-semibold text-ink-900 leading-snug">
+                    Nachhaltig beraten. Zukunft gestalten.
+                  </p>
+                </div>
               </div>
             </div>
+            <p className="text-xs text-ink-400 text-center mt-8">Mit KI generiert</p>
           </div>
         </div>
       </section>
@@ -190,22 +193,25 @@ export default function Home() {
 
       <section className="py-16 sm:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative mb-16 lg:mb-0 lg:order-2">
-            <img
-              src="lifestyle-family.jpg"
-              alt="Familie entspannt zu Hause im Wohnzimmer"
-              className="w-full aspect-[4/3] object-cover rounded-2xl shadow-lg"
-            />
-            <div className="absolute -bottom-6 left-4 right-4 sm:left-auto sm:right-[-1.5rem] sm:w-72 bg-white rounded-xl shadow-lg p-5 flex items-start gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-100">
-                <HomeIcon className="text-brand-700" size={20} />
-              </div>
-              <div>
-                <p className="font-semibold text-ink-900 leading-snug">
-                  Gut beraten. Besser wohnen.
-                </p>
+          <div className="mb-16 lg:mb-0 lg:order-2">
+            <div className="relative">
+              <img
+                src="lifestyle-family.jpg"
+                alt="Familie entspannt zu Hause im Wohnzimmer"
+                className="w-full aspect-[4/3] object-cover rounded-2xl shadow-lg"
+              />
+              <div className="absolute -bottom-6 left-4 right-4 sm:left-auto sm:right-[-1.5rem] sm:w-72 bg-white rounded-xl shadow-lg p-5 flex items-start gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-100">
+                  <HomeIcon className="text-brand-700" size={20} />
+                </div>
+                <div>
+                  <p className="font-semibold text-ink-900 leading-snug">
+                    Gut beraten. Besser wohnen.
+                  </p>
+                </div>
               </div>
             </div>
+            <p className="text-xs text-ink-400 text-center mt-8">Mit KI generiert</p>
           </div>
 
           <div className="lg:order-1">

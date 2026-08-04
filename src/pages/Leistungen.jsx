@@ -18,6 +18,7 @@ const LEISTUNGEN = [
     text: 'Der individuelle Sanierungsfahrplan (iSFP) zeigt Ihnen, in welcher Reihenfolge sich Sanierungsmaßnahmen an Ihrem Gebäude energetisch und wirtschaftlich am meisten lohnen. Mit einem iSFP profitieren Sie vom iSFP-Bonus: Der Fördersatz für nachfolgende Einzelmaßnahmen steigt von 15 % auf 20 %, und die förderfähigen Investitionskosten erhöhen sich von 30.000 € auf 60.000 € pro Wohneinheit und Jahr. Zudem haben Sie 15 Jahre Zeit, die vorgeschlagenen Maßnahmen umzusetzen, ohne den Bonus zu verlieren. Die Erstellung des iSFP selbst wird ebenfalls gefördert: 50 % der Kosten, bis 650 € bei 1–2 Wohneinheiten bzw. bis 850 € ab 2 Wohneinheiten.',
     bild: 'leistungen-isfp.png',
     bildAlt: 'Beispiel eines individuellen Sanierungsfahrplans (iSFP)',
+    bildKiGeneriert: true,
   },
   {
     slug: 'energieausweise',
@@ -79,11 +80,16 @@ export default function Leistungen() {
             </div>
             <div className={l.bild ? 'grid sm:grid-cols-[260px,1fr] gap-6 items-start' : ''}>
               {l.bild && (
-                <img
-                  src={l.bild}
-                  alt={l.bildAlt}
-                  className="w-full sm:w-[260px] aspect-[3/4] object-cover rounded-xl shadow-sm"
-                />
+                <div className="w-full sm:w-[260px]">
+                  <img
+                    src={l.bild}
+                    alt={l.bildAlt}
+                    className="w-full aspect-[3/4] object-cover rounded-xl shadow-sm"
+                  />
+                  {l.bildKiGeneriert && (
+                    <p className="text-xs text-ink-400 text-center mt-2">Mit KI generiert</p>
+                  )}
+                </div>
               )}
               <p className="text-ink-700 max-w-3xl">{l.text}</p>
             </div>
