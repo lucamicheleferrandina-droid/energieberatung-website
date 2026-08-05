@@ -114,6 +114,13 @@ export default function Datenschutz() {
         Datenschutzerklärung entsprechend aktualisiert und, soweit
         erforderlich, vorab Ihre Einwilligung eingeholt.
       </p>
+      <p className="text-ink-700">
+        Die auf dieser Website verwendete Schriftart „Inter“ ist lokal auf
+        unserem Server gespeichert und wird bei Ihrem Besuch direkt von
+        dort ausgeliefert. Es findet keine Verbindung zu Servern von Google
+        oder einem anderen Drittanbieter zum Nachladen von Schriftarten
+        statt, es werden dabei also auch keine Daten an Dritte übermittelt.
+      </p>
 
       <h2 className="font-semibold text-ink-900 mt-8">6. SSL-/TLS-Verschlüsselung</h2>
       <p className="text-ink-700">
