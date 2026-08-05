@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { to: '/leistungen', label: 'Leistungen' },
   { to: '/ueber-mich', label: 'Über mich' },
   { to: '/ratgeber', label: 'Ratgeber' },
+  { to: '/foerder-check', label: 'Förder-Check' },
   { to: '/faq', label: 'FAQs' },
 ]
 

@@ -10,7 +10,7 @@ const rootDir = dirname(fileURLToPath(import.meta.url))
 const distDir = join(rootDir, '..', 'dist')
 const indexHtml = join(distDir, 'index.html')
 
-const routes = ['leistungen', 'ueber-mich', 'ratgeber', 'faq', 'kontakt', 'impressum', 'datenschutz']
+const routes = ['leistungen', 'ueber-mich', 'ratgeber', 'foerder-check', 'faq', 'kontakt', 'impressum', 'datenschutz']
 
 if (!existsSync(indexHtml)) {
   console.error('dist/index.html nicht gefunden – lief "vite build" davor?')
